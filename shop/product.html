@@ -1,0 +1,1054 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Thu Feb 29 2024 09:13:35 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65d7302f76f2fa3e6aeaa482" data-wf-site="65d7302f76f2fa3e6aeaa408" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_title }}</title>
+  <meta content="{{ page_description }}" name="description">
+  <meta content="{{ page_title }}" property="og:title">
+  <meta content="{{ page_description }}" property="og:description">
+  <meta content="{{ page_title }}" property="twitter:title">
+  <meta content="{{ page_description }}" property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/earproliquify.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://use.typekit.net/wdj1vqn.js" type="text/javascript"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+  [x-cloak] { display: none !important; }
+  [li-cloak] { display: none !important; }
+/* Setup Font and Background Color if Text is selected */
+::selection {
+  color: #fff;
+  background: #E91B7F;
+}
+::-moz-selection {
+  color: #fff;
+  background: #E91B7F;
+}
+</style>
+  <meta name="theme-color" content="#000" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#fff" media="(prefers-color-scheme: dark)">
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "{{ product.title }}",
+       "image": "https:{{ product.featured_image.src | img_url: '1500x1500' }}",
+        "description": "{{ product.description | strip_html }}",
+        "brand": "{{ product.vendor }}",
+        "sku": "{{ product.selected_or_first_available_variant.sku }}",
+        "offers": [
+        {% for variant in product.variants %}{
+          "@type": "Offer",
+          "url": "{{ variant.url }}",
+          "priceCurrency": "EUR",
+          "price": "{{ variant.price }}",
+      "priceValidUntil": "{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' | uri_encode | replace:'+','%20' }}",
+          "availability": "{% if variant.available %}https://schema.org/InStock{% else variant.available == false %}https://schema.org/SoldOut{% endif %}",
+          "itemCondition": "https://schema.org/NewCondition"
+        }{% if forloop.last == false %},{% endif %}{% endfor %}
+        ]
+        }
+    </script>
+  <script type="application/ld+json">
+      {
+         "@context": "https://schema.org",
+         "@type": "BreadcrumbList",
+         "itemListElement":
+         [
+          {
+           "@type": "ListItem",
+           "position": 1,
+           "item":
+           {
+            "@id": "{{ shop.url }}",
+            "name": "Home"
+            }
+          },
+        {
+           "@type": "ListItem",
+           "position": 2,
+           "item":
+           {
+            "@id": "{% if collection.url %}{{ collection.url }}{% else %}{{ product.vendor }}{% endif %}",
+            "name": "{% if collection.url %}{{collection.title }}{% else %}{{ product.vendor }}{% endif %}"
+            }
+          },
+          {
+           "@type": "ListItem",
+          "position": 3,
+          "item":
+           {
+             "@id": "{{ product.url }}",
+             "name": "{{ product.title }}"
+           }
+          }
+         ]
+        }
+    </script>
+  <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{% for fa_qs in shop.metaobjects.fa_qs.values %}{
+            "@type": "Question",
+            "name": "{{ fa_qs.frage }}",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "{{ fa_qs.antwort | metafield_tag | strip_html }}"
+            }
+          }{% if forloop.last == false %},{% endif %}{% endfor %}
+          ]
+        }
+    </script>
+</head>
+<body li-page="product">
+  <div class="page-wrapper">
+    <div li-snippet="global-styles" class="global-styles w-embed">
+      <style>
+   [li-cloak="hide"]  { display: none !important; }
+   [x-cloak] { display: none !important; }
+  /* Make text look crisper and more legible in all browsers */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  /* Focus state style for keyboard navigation for the focusable elements */
+  *[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+  }
+  /* Get rid of top margin on first element in any rich text element */
+  .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+  }
+  /* Get rid of bottom margin on last element in any rich text element */
+  .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+  }
+  /* Prevent all click and hover interaction with an element */
+  .pointer-events-off, .mini-cart-closed {
+    pointer-events: none;
+  }
+  /* Enables all click and hover interaction with an element */
+  .pointer-events-on {
+    pointer-events: auto;
+  }
+  /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+  .div-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  /* Make sure containers never lose their center alignment */
+  .container-medium,.container-small, .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  /* 
+  Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+  Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+  Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+  */
+  /*
+  a,
+  .w-input,
+  .w-select,
+  .w-tab-link,
+  .w-nav-link,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  }
+  */
+  /* Apply "..." after 3 lines of text */
+  .text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  /* Apply "..." after 2 lines of text */
+  .text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  /* Adds inline flex display */
+  .display-inlineflex {
+    display: inline-flex;
+  }
+  /* These classes are never overwritten */
+  .hide {
+    display: none !important;
+  }
+  @media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+  }
+  .margin-0 {
+    margin: 0rem !important;
+  }
+  .padding-0 {
+    padding: 0rem !important;
+  }
+  .spacing-clean {
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+  .margin-top {
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-top {
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-right {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-right {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-bottom {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-bottom {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  .margin-left {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .padding-left {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .margin-horizontal {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .padding-horizontal {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+  .margin-vertical {
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+  .padding-vertical {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance !important;
+  }
+  .page-wrapper {
+    overflow: clip !important;
+  }
+  body {
+    overflowscroll-behavior: none;
+  }
+  .swiper-button-disabled {
+    opacity: 50% !important;
+    pointer-events: none !important;
+  }
+  .padding-global {
+    pointer-events: none;
+  }
+  .container-large, .container-medium, .container-small {
+    pointer-events: auto;
+  }
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
+}
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+</style>
+    </div>
+    <div data-animation="default" class="navbar1_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" li-section="header" role="banner" li-object:href="routes.root_url" data-duration="400">
+      <div class="navbar1_container">
+        <a href="#" class="navbar1_logo-link w-nav-brand"><img src="../images/Logo_lowRes.png" loading="lazy" alt="" class="navbar1_logo"></a>
+        <nav role="navigation" class="navbar1_menu w-nav-menu">
+          <a href="#" li-object:href="link.url" li-for="link in linklists[&#x27;main-menu&#x27;].links" class="navbar1_link w-nav-link">LINK ONe</a>
+        </nav>
+        <div class="navbar1_menu-button w-nav-button">
+          <div class="menu-icon1">
+            <div class="menu-icon1_line-top"></div>
+            <div class="menu-icon1_line-middle">
+              <div class="menu-icon_line-middle-inner"></div>
+            </div>
+            <div class="menu-icon1_line-bottom"></div>
+          </div>
+        </div>
+        <div class="navbar_shop-icons">
+          <div>
+            <div x-bind:class="modals === 1 ? &#x27;is-open&#x27; : &#x27;&#x27;" class="navbar_predictive-search-holder">
+              <div x-on:click="modals = 0" class="navbar_predictive-search-close"></div>
+              <div li-snippet="predictive-search-co">
+                <div class="predictive-search_component">
+                  <div class="predictive-search_header">
+                    <div class="heading-style-h3">Search</div>
+                    <div x-on:click="modals = 0" class="predictive-search_close w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.84775 14.178L0.447754 12.778L6.04775 7.17798L0.447754 1.57798L1.84775 0.177979L7.44775 5.77798L13.0478 0.177979L14.4478 1.57798L8.84775 7.17798L14.4478 12.778L13.0478 14.178L7.44775 8.57798L1.84775 14.178Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                  <predictive-search>
+                    <div class="predictive-search_holder">
+                      <div class="predictive-search_form w-form">
+                        <form id="wf-form-produkt-suche" name="wf-form-produkt-suche" data-name="produkt-suche" action="/search" method="get" class="predictive-search_form-component" data-wf-page-id="65d7302f76f2fa3e6aeaa482" data-wf-element-id="5b2e553e-a617-32ad-1ea6-e4a5af758746">
+                          <div class="predictive-search_input-holder"><input class="predictive-search_input" type="search" id="suche" placeholder="Search now"><input id="submit-search" type="submit" data-wait="Please wait..." class="hide w-button" value="Submit">
+                            <a href="#" class="navbar_shop-icon w-inline-block">
+                              <div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 25 25" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                                  <mask id="mask0_2941_121300" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                                    <rect x="0.123535" y="0.987549" width="24" height="24" fill="#D9D9D9"></rect>
+                                  </mask>
+                                  <g mask="url(#mask0_2941_121300)">
+                                    <path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875ZM9.62354 14.9875C10.8735 14.9875 11.936 14.55 12.811 13.675C13.686 12.8 14.1235 11.7375 14.1235 10.4875C14.1235 9.23755 13.686 8.17505 12.811 7.30005C11.936 6.42505 10.8735 5.98755 9.62354 5.98755C8.37354 5.98755 7.31104 6.42505 6.43604 7.30005C5.56104 8.17505 5.12354 9.23755 5.12354 10.4875C5.12354 11.7375 5.56104 12.8 6.43604 13.675C7.31104 14.55 8.37354 14.9875 9.62354 14.9875Z" fill="currentColor"></path>
+                                  </g>
+                                </svg></div>
+                            </a>
+                          </div>
+                          <div id="predictive-search" fs-scrolldisable-element="preserve" class="predictive-search_overflow no-scrollbar">
+                            <div li-section="predictive-search">
+                              <div li-if="predictive_search.performed">
+                                <div li-tag="assign first_column_results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.products.size" class="hide">This is some text inside of a div block.</div>
+                                <div li-if="first_column_results_size &gt; 0">
+                                  <div li-if="predictive_search.resources.queries.size &gt; 0 or predictive_search.resources.collections.size &gt; 0" class="predictive-search_topic">
+                                    <div class="predictive-search_headline">
+                                      <div class="text-style-muted">Suggestions</div>
+                                    </div>
+                                    <ul role="list" class="predictive-search_list w-list-unstyled">
+                                      <li li-for="query in predictive_search.resources.queries" class="predictive-search_item">
+                                        <a x-bind:href="{{ query.url }}" href="#" class="predictive-search_link w-inline-block">
+                                          <div li-object="query.styled_text">Tag</div>
+                                        </a>
+                                      </li>
+                                      <li li-for="collection in predictive_search.resources.collections" class="predictive-search_item">
+                                        <a x-bind:href="&#x27;{{ collection.url }}&#x27;" href="#" class="predictive-search_link w-inline-block">
+                                          <div li-object="collection.title">Tag</div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div li-if="predictive_search.resources.products.size &gt; 0 or predictive_search.resources.articles.size &gt; 0 or predictive_search.resources.pages.size &gt; 0" class="predictive-search_topic">
+                                    <div class="predictive-search_headline">
+                                      <div class="text-style-muted">Products</div>
+                                    </div>
+                                    <ul role="list" class="predictive-search_product-list w-list-unstyled">
+                                      <li li-for="product in predictive_search.resources.products" class="predictive-search_produt-item">
+                                        <a x-bind:href="&#x27;{{ product.url }}&#x27;" href="#" class="predictive-search_line-item w-inline-block">
+                                          <div class="predictive-search_image-wrapper"><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" src="../images/platzhalter.svg" loading="lazy" alt="" class="predictive-search_image"></div>
+                                          <div class="predictive-search_product-info">
+                                            <div class="text-size-regular text-weight-bold"><span li-object="product.title">Product Title</span></div>
+                                            <div class="text-size-small"><span li-object="product.price | money">18.00$</span></div>
+                                          </div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div li-if="predictive_search.resources.articles.size &gt; 0 or predictive_search.resources.pages.size &gt; 0" class="predictive-search_topic">
+                                    <div class="predictive-search_headline">
+                                      <div class="text-style-muted">Pages</div>
+                                    </div>
+                                    <ul role="list" class="predictive-search_list w-list-unstyled">
+                                      <li li-for="page in predictive_search.resources.pages" class="predictive-search_item">
+                                        <a x-bind:href="&#x27;{{ page.url }}&#x27;" href="#" class="predictive-search_link w-inline-block">
+                                          <div li-object="page.title">Tag</div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div li-if="first_column_results_size == 0">
+                                  <div class="predictive-search_topic">
+                                    <div class="text-style-muted">Nothing found in &quot;<span li-object="predictive_search.terms">Search Term</span>&quot;</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div li-unless="predictive_search.performed">
+                                <div class="predictive-search_overflow">
+                                  <div>
+                                    <div>
+                                      <div class="predictive-search_topic">
+                                        <div class="predictive-search_headline">
+                                          <div class="text-style-muted">Suggestions</div>
+                                        </div>
+                                        <ul role="list" class="predictive-search_list w-list-unstyled">
+                                          <li li-block="Vorschlaege" class="predictive-search_item">
+                                            <a li-settings:url="Link" href="#" class="predictive-search_link w-inline-block">
+                                              <div li-settings:text="Text">Tag</div>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="predictive-search_topic">
+                                        <div class="predictive-search_headline">
+                                          <div class="text-style-muted">Bestseller</div>
+                                        </div>
+                                        <ul role="list" class="predictive-search_product-list w-list-unstyled">
+                                          <li li-settings:collection="Bestseller" class="predictive-search_produt-item">
+                                            <a li-object:href="product.url" href="#" class="predictive-search_line-item w-inline-block">
+                                              <div class="predictive-search_image-wrapper"><img li-object:src="product.featured_image | img_url: &#x27;master&#x27;" li-object:alt="product.featured_image.alt" src="../images/platzhalter.svg" loading="lazy" alt="" class="predictive-search_image"></div>
+                                              <div class="predictive-search_product-info">
+                                                <div class="text-size-regular text-weight-bold"><span li-object="product.title">Product Title</span></div>
+                                                <div class="text-size-small"><span li-object="product.price | money">18.00$</span></div>
+                                              </div>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="hide w-form-done">
+                          <div>Thank you! Your submission has been received!</div>
+                        </div>
+                        <div class="hide w-form-fail">
+                          <div>Oops! Something went wrong while submitting the form.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </predictive-search>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div li-if="customer">
+            <a li-object:href="routes.account_url" href="#" class="navbar_shop-icon w-inline-block">
+              <div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                  <mask id="mask0_2941_121306" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"></rect>
+                  </mask>
+                  <g mask="url(#mask0_2941_121306)">
+                    <path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4ZM6 18H18V17.2C18 17.0167 17.9542 16.85 17.8625 16.7C17.7708 16.55 17.65 16.4333 17.5 16.35C16.6 15.9 15.6917 15.5625 14.775 15.3375C13.8583 15.1125 12.9333 15 12 15C11.0667 15 10.1417 15.1125 9.225 15.3375C8.30833 15.5625 7.4 15.9 6.5 16.35C6.35 16.4333 6.22917 16.55 6.1375 16.7C6.04583 16.85 6 17.0167 6 17.2V18ZM12 10C12.55 10 13.0208 9.80417 13.4125 9.4125C13.8042 9.02083 14 8.55 14 8C14 7.45 13.8042 6.97917 13.4125 6.5875C13.0208 6.19583 12.55 6 12 6C11.45 6 10.9792 6.19583 10.5875 6.5875C10.1958 6.97917 10 7.45 10 8C10 8.55 10.1958 9.02083 10.5875 9.4125C10.9792 9.80417 11.45 10 12 10Z" fill="currentColor"></path>
+                  </g>
+                </svg></div>
+            </a>
+          </div>
+          <div li-unless="customer">
+            <a li-object:href="routes.account_login_url" href="#" class="navbar_shop-icon w-inline-block">
+              <div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                  <mask id="mask0_2941_121306" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"></rect>
+                  </mask>
+                  <g mask="url(#mask0_2941_121306)">
+                    <path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4ZM6 18H18V17.2C18 17.0167 17.9542 16.85 17.8625 16.7C17.7708 16.55 17.65 16.4333 17.5 16.35C16.6 15.9 15.6917 15.5625 14.775 15.3375C13.8583 15.1125 12.9333 15 12 15C11.0667 15 10.1417 15.1125 9.225 15.3375C8.30833 15.5625 7.4 15.9 6.5 16.35C6.35 16.4333 6.22917 16.55 6.1375 16.7C6.04583 16.85 6 17.0167 6 17.2V18ZM12 10C12.55 10 13.0208 9.80417 13.4125 9.4125C13.8042 9.02083 14 8.55 14 8C14 7.45 13.8042 6.97917 13.4125 6.5875C13.0208 6.19583 12.55 6 12 6C11.45 6 10.9792 6.19583 10.5875 6.5875C10.1958 6.97917 10 7.45 10 8C10 8.55 10.1958 9.02083 10.5875 9.4125C10.9792 9.80417 11.45 10 12 10Z" fill="currentColor"></path>
+                  </g>
+                </svg></div>
+            </a>
+          </div>
+          <div li-element="mini-cart">
+            <div li-element="mini-cart-toggle" class="navbar_shop-icon">
+              <div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                  <mask id="mask0_2941_121294" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"></rect>
+                  </mask>
+                  <g mask="url(#mask0_2941_121294)">
+                    <path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6ZM6 20H18V8H16V10C16 10.2833 15.9042 10.5208 15.7125 10.7125C15.5208 10.9042 15.2833 11 15 11C14.7167 11 14.4792 10.9042 14.2875 10.7125C14.0958 10.5208 14 10.2833 14 10V8H10V10C10 10.2833 9.90417 10.5208 9.7125 10.7125C9.52083 10.9042 9.28333 11 9 11C8.71667 11 8.47917 10.9042 8.2875 10.7125C8.09583 10.5208 8 10.2833 8 10V8H6V20ZM10 6H14C14 5.45 13.8042 4.97917 13.4125 4.5875C13.0208 4.19583 12.55 4 12 4C11.45 4 10.9792 4.19583 10.5875 4.5875C10.1958 4.97917 10 5.45 10 6Z" fill="currentColor"></path>
+                  </g>
+                </svg></div>
+              <div li-element="mini-cart-item-count" class="navbar_shop-quantity">1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main li-content-for-layout="" class="main-wrapper">
+      <div li-section="Product-Hero" class="section_product-header">
+        <div class="padding-global z-index-1">
+          <div class="container-large">
+            <div class="product-header_component">
+              <div li-element="product-variant-container" class="w-layout-grid product-header_layout">
+                <div class="swiper-container is-product-gallery">
+                  <div class="swiper is-product-gallery">
+                    <div id="my-gallery" class="swiper-wrapper is-product-gallery">
+                      <div li-for="image in product.images" class="swiper-slide is-product-gallery">
+                        <div class="product_gallery-lightbox"><img loading="lazy" li-object:src="image.src | product_img_url: &#x27;master&#x27;" li-object:alt="image.alt" src="../images/platzhalter.svg" alt="" class="product_gallery-image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-header_slider-wrapper">
+                    <div class="swiper_button-wrapper is-product-slider pointer-events-off z-index-1 hide-mobile-landscape">
+                      <a href="#" class="swiper_button swiper-prev pointer-events-on w-inline-block">
+                        <div class="swiper_button-icon is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
+                            <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)">
+                              <path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path>
+                              <line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line>
+                            </g>
+                          </svg></div>
+                      </a>
+                      <a href="#" class="swiper_button swiper-next pointer-events-on w-inline-block">
+                        <div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323">
+                            <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)">
+                              <path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path>
+                              <line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line>
+                            </g>
+                          </svg></div>
+                      </a>
+                    </div>
+                    <div class="swiper is-product-thumbnail">
+                      <div class="swiper-wrapper is-product-thumbnail">
+                        <div li-for="image in product.images" class="swiper-slide is-product-thumbnail"><img loading="lazy" li-object:src="image.src | product_img_url: &#x27;master&#x27;" li-object:alt="image.alt" src="../images/platzhalter.svg" alt="" class="product_thumbnail-image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide is-product-thumbnail is-active hide"></div>
+                </div>
+                <div id="w-node-_7048b639-be81-c25f-3e39-a62262971160-6aeaa482" class="product-header_product-details">
+                  <div li-object="product.vendor" class="text-size-regular">Vendor</div>
+                  <h1 li-object:text="product.title" class="heading-style-h2">Product name</h1>
+                  <div class="spacer-small"></div>
+                  <div class="product-header_price-wrapper">
+                    <div li-object="product.price" li-js-price="price" class="text-size-large text-weight-bold">$55</div>
+                    <div li-js-if="selected_or_first_available_variant.compare_at_price &gt; selected_or_first_available_variant.price">
+                      <div li-object="product.compare_at_price | money" class="text-size-regular text-style-strikethrough text-align-right text-style-muted">$55</div>
+                    </div>
+                    <div class="product-header_tag-list">
+                      <div li-js-if="selected_or_first_available_variant.available != true" class="product-item_tag">Not in Stock</div>
+                      <div li-js-if="selected_or_first_available_variant.compare_at_price &gt; selected_or_first_available_variant.price" class="product-item_tag is-red">Sale</div>
+                    </div>
+                  </div>
+                  <div class="text-size-small">inkl. MwSt.</div>
+                  <div class="spacer-small"></div>
+                  <div class="product-header_lieferzeit-wrapper">
+                    <div class="spacer-small"></div>
+                    <div li-js-if="selected_or_first_available_variant.available == true" class="product-header_lieferzeit">
+                      <div class="product-header_lieferzeit-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <mask id="mask0_1611_6356" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22">
+                            <rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect>
+                          </mask>
+                          <g mask="url(#mask0_1611_6356)">
+                            <path d="M13.9736 18.3334C11.9264 18.3334 10.1923 17.623 8.77151 16.2022C7.35068 14.7813 6.64026 13.0473 6.64026 11.0001C6.64026 8.96814 7.35068 7.23793 8.77151 5.80946C10.1923 4.38098 11.9264 3.66675 13.9736 3.66675C16.0055 3.66675 17.7357 4.38098 19.1642 5.80946C20.5927 7.23793 21.3069 8.96814 21.3069 11.0001C21.3069 13.0473 20.5927 14.7813 19.1642 16.2022C17.7357 17.623 16.0055 18.3334 13.9736 18.3334ZM13.9736 16.5001C15.5014 16.5001 16.8 15.9654 17.8694 14.8959C18.9389 13.8265 19.4736 12.5279 19.4736 11.0001C19.4736 9.4723 18.9389 8.17369 17.8694 7.10425C16.8 6.0348 15.5014 5.50008 13.9736 5.50008C12.4458 5.50008 11.1472 6.0348 10.0778 7.10425C9.00831 8.17369 8.47359 9.4723 8.47359 11.0001C8.47359 12.5279 9.00831 13.8265 10.0778 14.8959C11.1472 15.9654 12.4458 16.5001 13.9736 16.5001ZM16.059 14.4147L17.3653 13.1084L14.8903 10.6334V7.33341H13.0569V11.3897L16.059 14.4147ZM2.05693 8.25008V6.41675H5.72359V8.25008H2.05693ZM1.14026 11.9167V10.0834H5.72359V11.9167H1.14026ZM2.05693 15.5834V13.7501H5.72359V15.5834H2.05693Z" fill="#323232"></path>
+                          </g>
+                        </svg></div>
+                      <div>Delivery: <span>1–3 Days</span></div>
+                    </div>
+                    <div class="spacer-xxsmall"></div>
+                    <div class="product-header_lieferzeit">
+                      <div class="product-header_lieferzeit-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                          <mask id="mask0_1612_6254" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22">
+                            <rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect>
+                          </mask>
+                          <g mask="url(#mask0_1612_6254)">
+                            <path d="M11.223 10.9999C11.7271 10.9999 12.1587 10.8204 12.5178 10.4614C12.8768 10.1023 13.0563 9.67075 13.0563 9.16659C13.0563 8.66242 12.8768 8.23082 12.5178 7.87179C12.1587 7.51277 11.7271 7.33325 11.223 7.33325C10.7188 7.33325 10.2872 7.51277 9.92819 7.87179C9.56916 8.23082 9.38965 8.66242 9.38965 9.16659C9.38965 9.67075 9.56916 10.1023 9.92819 10.4614C10.2872 10.8204 10.7188 10.9999 11.223 10.9999ZM11.223 17.7374C13.0869 16.0263 14.4695 14.4718 15.3709 13.0739C16.2723 11.676 16.723 10.4346 16.723 9.34992C16.723 7.68464 16.1921 6.3211 15.1303 5.25929C14.0685 4.19749 12.766 3.66659 11.223 3.66659C9.67993 3.66659 8.3775 4.19749 7.31569 5.25929C6.25388 6.3211 5.72298 7.68464 5.72298 9.34992C5.72298 10.4346 6.17368 11.676 7.07507 13.0739C7.97645 14.4718 9.35909 16.0263 11.223 17.7374ZM11.223 20.1666C8.76326 18.0735 6.92611 16.1294 5.71152 14.3343C4.49694 12.5392 3.88965 10.8777 3.88965 9.34992C3.88965 7.05825 4.6268 5.23256 6.10111 3.87284C7.57541 2.51311 9.2827 1.83325 11.223 1.83325C13.1633 1.83325 14.8706 2.51311 16.3449 3.87284C17.8192 5.23256 18.5563 7.05825 18.5563 9.34992C18.5563 10.8777 17.949 12.5392 16.7344 14.3343C15.5199 16.1294 13.6827 18.0735 11.223 20.1666Z" fill="#323232"></path>
+                          </g>
+                        </svg></div>
+                      <div>Availability: <span li-js-if="selected_or_first_available_variant.available == true" class="text-color-green">available</span><span li-js-if="selected_or_first_available_variant.available == false" class="text-color-red">not available</span></div>
+                    </div>
+                    <div class="spacer-small"></div>
+                  </div>
+                  <div class="spacer-small"></div>
+                  <div class="product-header_add-to-cart w-form">
+                    <form method="get" li-form:product="" name="email-form" data-name="Email Form" li-form="product" id="email-form" class="product-header_default-state" data-wf-page-id="65d7302f76f2fa3e6aeaa482" data-wf-element-id="7048b639-be81-c25f-3e39-a62262971182">
+                      <div li-if="product.has_only_default_variant != true" class="product-header_option-list">
+                        <div li-element="product-options-loop" class="product-header_option">
+                          <div li-element="product-options-name">Variant</div>
+                          <div class="product-header_radio-list"><label li-element="product-option-loop" class="product-header_radio w-radio">
+                              <div class="w-form-formradioinput w-form-formradioinput--inputType-custom product-header_radio-button w-radio-input"></div><input id="radio" type="radio" name="Radio" data-name="Radio" li-element="product-option-input" style="opacity:0;position:absolute;z-index:-1" value="Radio"><span li-element="product-option-name" class="text-size-regular text-weight-semibold w-form-label" for="radio">XS</span>
+                            </label></div>
+                        </div>
+                      </div>
+                      <div class="spacer-small"></div>
+                      <div class="product-header_ad-to-cart-wrapper">
+                        <div li-js-if="selected_or_first_available_variant.available == true" class="product-header_quantity"><input class="form-input is-quantity w-input" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="quantity" placeholder="1" type="number" id="quantity" required="">
+                          <a li-element="add-to-cart" href="#" class="button max-width-full w-button">Add to cart</a>
+                        </div>
+                        <div li-js-if="selected_or_first_available_variant.available != true">
+                          <a href="#" class="button is-secondary max-width-full pointer-events-off w-button">Not in Stock</a>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="out-of-stock-state w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="error-state w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-header_bg">
+          <div class="product-header_bg-grey"></div>
+        </div>
+      </div>
+      <section li-section="Product-Description" class="section_beschreibung">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-medium">
+              <h2 li-settings:text="Headline" class="heading-style-h2">Description</h2>
+              <div class="spacer-medium"></div>
+              <div li-object="product.description" class="text-rich-text max-width-large w-richtext">
+                <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+                <h4>So leicht ist Wetterschutz</h4>
+                <p>Die Xperior Gore-Tex Paclite Rain Jacket trumpft mit großem Schutz vor Wind und Regen sowie ihrem besonders kleinen Packmaß auf. Perfekte Eigenschaften für Wander- und Trekkingtouren.</p>
+                <h4>So leicht ist Wetterschutz</h4>
+                <p>Die Jacke ist gefertigt aus recyceltem Polyester Gore-Tex Paclite, das besonders leicht und atmungsaktiv ist. Durch die hochwertige Membran hält dir die Xperior auf deinen Wander- und Trekkingtouren zuverlässig Wind und Regen vom Leibe. Gleichzeitig bietet sie durch die hohe Atmungsaktivität ein angenehmes Trageklima.</p>
+              </div>
+            </div>
+          </div>
+          <div id="beschreibung" class="anchor-link"></div>
+        </div>
+      </section>
+      <section li-section="Product-Recommended" class="section_product-recommended">
+        <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&amp;product_id={{ product.id }}&amp;limit=4&amp;intent=related" class="padding-global product-recommendations">
+          <div id="empfohlen" class="anchor-link"></div>
+          <div class="container-large">
+            <div class="padding-section-medium swiper-container">
+              <div class="section_headline">
+                <h2 li-settings:text="Headline" class="heading-style-h2">Recommended</h2>
+              </div>
+              <div class="product_list-wrapper product-recommendations">
+                <ul role="list" class="product_list w-list-unstyled">
+                  <li li-for="product in recommendations.products" class="product_list-item">
+                    <div li-snippet:product="product" li-snippet="product-item">
+                      <div class="product-item_component">
+                        <div class="product-item_image-link">
+                          <a li-object:href="product.url" href="#" class="product-item_image-wrapper w-inline-block"><img li-object:alt="product.featured_image.alt" loading="lazy" li-object:src="product.featured_image | img_url: &#x27;master&#x27;" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg" alt="" class="product-item_image"></a>
+                          <div class="product-item_tag_list">
+                            <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">Not in Stock</div>
+                            <div li-if="product.compare_at_price_max &gt; product.price" class="product-item_tag is-red">Sale</div>
+                          </div>
+                        </div>
+                        <div class="spacer-xxsmall"></div>
+                        <a li-object:href="product.url" href="#" class="product-item_text-link w-inline-block">
+                          <div class="product-item_left">
+                            <div li-object="product.vendor" class="text-size-small">Vendor</div>
+                            <div class="heading-style-h4 text-weight-normal"><span li-object="product.title">Product name</span></div>
+                          </div>
+                          <div class="product-item_price">
+                            <div li-if="product.compare_at_price_max &gt; product.price">
+                              <div li-object="product.compare_at_price | money" class="text-size-regular text-style-strikethrough text-style-muted">$55</div>
+                            </div>
+                            <div li-object="product.price | money" class="text-size-regular">$55</div>
+                          </div>
+                        </a>
+                        <div class="spacer-xsmall is-grow"></div>
+                        <div class="margin-top-auto">
+                          <div class="product-item_form-wrapper">
+                            <div li-if="product.available == true">
+                              <a li-element="direct-add-to-cart" href="#" class="button max-width-full w-button">Add to Cart</a>
+                            </div>
+                            <div li-if="product.available != true">
+                              <a href="#" class="button is-secondary pointer-events-off max-width-full w-button">Not in Stock</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer li-section="footer" class="footer3_component">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-vertical padding-xxlarge">
+              <div class="padding-bottom padding-xxlarge">
+                <div class="w-layout-grid footer3_top-wrapper">
+                  <div class="footer3_left-wrapper">
+                    <div class="margin-bottom margin-medium">
+                      <a href="#" class="footer3_logo-link w-nav-brand"><img src="../images/Logo_lowRes.png" loading="lazy" alt=""></a>
+                    </div>
+                    <div class="margin-bottom margin-medium">
+                      <div class="footer3_details-wrapper">
+                        <div class="margin-bottom margin-tiny">
+                          <div li-settings:text="Heading-1" class="text-size-small text-weight-semibold">Address:</div>
+                        </div>
+                        <div class="margin-bottom margin-small">
+                          <div li-settings:text="Text-1" class="text-size-small">Level 1, 12 Sample St, Sydney NSW 2000</div>
+                        </div>
+                        <div class="margin-bottom margin-tiny">
+                          <div li-settings:text="Heading-2" class="text-size-small text-weight-semibold">Contact:</div>
+                        </div>
+                        <div class="text-size-small">
+                          <a href="#" li-settings:url="Text-2-Link-Top" li-settings:text="Text-2-Top" class="text-color-white">1800 123 4567<br></a>
+                          <a href="#" li-settings:url="Text-2-Link-Bottom" li-settings:text="Text-2-Bottom" class="text-color-white">info@relume.io</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-layout-grid footer3_social-list">
+                      <a href="#" class="footer3_social-link w-inline-block">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="CurrentColor"></path>
+                          </svg></div>
+                      </a>
+                      <a href="#" class="footer3_social-link w-inline-block">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="CurrentColor"></path>
+                          </svg></div>
+                      </a>
+                      <a href="#" class="footer3_social-link w-inline-block">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.1761 4H19.9362L13.9061 10.7774L21 20H15.4456L11.0951 14.4066L6.11723 20H3.35544L9.80517 12.7508L3 4H8.69545L12.6279 9.11262L17.1761 4ZM16.2073 18.3754H17.7368L7.86441 5.53928H6.2232L16.2073 18.3754Z" fill="CurrentColor"></path>
+                          </svg></div>
+                      </a>
+                      <a href="#" class="footer3_social-link w-inline-block">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 3C3.67157 3 3 3.67157 3 4.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V4.5C21 3.67157 20.3284 3 19.5 3H4.5ZM8.52076 7.00272C8.52639 7.95897 7.81061 8.54819 6.96123 8.54397C6.16107 8.53975 5.46357 7.90272 5.46779 7.00413C5.47201 6.15897 6.13998 5.47975 7.00764 5.49944C7.88795 5.51913 8.52639 6.1646 8.52076 7.00272ZM12.2797 9.76176H9.75971H9.7583V18.3216H12.4217V18.1219C12.4217 17.742 12.4214 17.362 12.4211 16.9819V16.9818V16.9816V16.9815V16.9812C12.4203 15.9674 12.4194 14.9532 12.4246 13.9397C12.426 13.6936 12.4372 13.4377 12.5005 13.2028C12.7381 12.3253 13.5271 11.7586 14.4074 11.8979C14.9727 11.9864 15.3467 12.3141 15.5042 12.8471C15.6013 13.1803 15.6449 13.5389 15.6491 13.8863C15.6605 14.9339 15.6589 15.9815 15.6573 17.0292V17.0294C15.6567 17.3992 15.6561 17.769 15.6561 18.1388V18.3202H18.328V18.1149C18.328 17.6629 18.3278 17.211 18.3275 16.7591V16.759V16.7588C18.327 15.6293 18.3264 14.5001 18.3294 13.3702C18.3308 12.8597 18.276 12.3563 18.1508 11.8627C17.9638 11.1286 17.5771 10.5211 16.9485 10.0824C16.5027 9.77019 16.0133 9.5691 15.4663 9.5466C15.404 9.54401 15.3412 9.54062 15.2781 9.53721L15.2781 9.53721L15.2781 9.53721C14.9984 9.52209 14.7141 9.50673 14.4467 9.56066C13.6817 9.71394 13.0096 10.0641 12.5019 10.6814C12.4429 10.7522 12.3852 10.8241 12.2991 10.9314L12.2991 10.9315L12.2797 10.9557V9.76176ZM5.68164 18.3244H8.33242V9.76733H5.68164V18.3244Z" fill="CurrentColor"></path>
+                          </svg></div>
+                      </a>
+                      <a href="#" class="footer3_social-link w-inline-block">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5686 4.77345C21.5163 5.02692 22.2555 5.76903 22.5118 6.71673C23.1821 9.42042 23.1385 14.5321 22.5259 17.278C22.2724 18.2257 21.5303 18.965 20.5826 19.2213C17.9071 19.8831 5.92356 19.8015 3.40294 19.2213C2.45524 18.9678 1.71595 18.2257 1.45966 17.278C0.827391 14.7011 0.871044 9.25144 1.44558 6.73081C1.69905 5.78311 2.44116 5.04382 3.38886 4.78753C6.96561 4.0412 19.2956 4.282 20.5686 4.77345ZM9.86682 8.70227L15.6122 11.9974L9.86682 15.2925V8.70227Z" fill="CurrentColor"></path>
+                          </svg></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="w-layout-grid footer3_menu-wrapper">
+                    <div class="footer3_link-list">
+                      <a li-settings:url="Link-URL" li-settings:text="Link-Text" li-block=" Navigation-Link-Left" href="#" class="footer3_link">Link One</a>
+                    </div>
+                    <div class="footer3_link-list">
+                      <a li-settings:text="Link-Text" li-block=" Link-Right" li-settings:url="Navigation-Link-URL" href="#" class="footer3_link">Link Six</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line-divider"></div>
+              <div class="padding-top padding-medium">
+                <div class="footer3_bottom-wrapper">
+                  <div class="footer3_credit-text">© 2024 EarPro.</div>
+                  <div class="w-layout-grid footer3_legal-list">
+                    <a li-settings:url="Legals-URL-1" li-settings:text="Legals-Text-1" href="#" class="footer3_legal-link">Datenschutzerklärung</a>
+                    <a li-settings:url="Legals-URL-2" li-settings:text="Legals-Text-2" href="#" class="footer3_legal-link">AGB</a>
+                    <a li-settings:url="Legals-URL-3" li-settings:text="Legals-Text-3" href="#" class="footer3_legal-link">Cookie Einstellungen</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65d7302f76f2fa3e6aeaa408" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+  <script>
+  // predictive-search
+  class PredictiveSearch extends HTMLElement {
+    constructor() {
+      super();
+      this.input = this.querySelector('input[type="search"]');
+      this.predictiveSearchResults = this.querySelector('#predictive-search');
+      this.input.addEventListener('input', this.debounce((event) => {
+        this.onChange(event);
+      }, 300).bind(this));
+    }
+    onChange() {
+      const searchTerm = this.input.value.trim();
+      if (!searchTerm.length) {
+        this.close();
+        return;
+      }
+      this.getSearchResults(searchTerm);
+    }
+    getSearchResults(searchTerm) {
+      fetch(`/search/suggest?q=${searchTerm}&section_id=predictive_search`)
+        .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
+          this.close();
+          throw error;
+        }
+        return response.text();
+      })
+        .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive_search').innerHTML;
+        this.predictiveSearchResults.innerHTML = resultsMarkup;
+        this.open();
+      })
+        .catch((error) => {
+        this.close();
+        throw error;
+      });
+    }
+    open() {
+      this.predictiveSearchResults.style.display = 'block';
+    }
+    close() {
+      this.predictiveSearchResults.style.display = 'none';
+    }
+    debounce(fn, wait) {
+      let t;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, args), wait);
+      };
+    }
+  }
+  customElements.define('predictive-search', PredictiveSearch);
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+  $(".swiper-container").each(function (index) {
+    const thumbsSwiper = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
+      slidesPerView: "auto",
+      rewind: false,
+      loopedSlides: 8,
+      slideToClickedSlide: true,
+      spaceBetween: "4%",
+    });
+    const swiper = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+      mousewheel: {
+        forceToAxis: true
+      },
+      thumbs: {
+        swiper: thumbsSwiper,
+        slideThumbActiveClass: "is-active",
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      navigation: {
+        nextEl: $(this).find(".swiper-next")[0],
+        prevEl: $(this).find(".swiper-prev")[0],
+      }
+    });
+  }); 
+</script>
+  <script>
+  const handleIntersection = (entries, observer) => {
+    if (!entries[0].isIntersecting) return;
+    observer.unobserve(productRecommendationsSection);
+    const url = productRecommendationsSection.dataset.url;
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+      const html = document.createElement('div');
+      html.innerHTML = text;
+      const recommendations = html.querySelector('.product-recommendations');
+      if (recommendations && recommendations.innerHTML.trim().length) {
+        productRecommendationsSection.innerHTML = recommendations.innerHTML;
+      }
+    })
+      .catch(e => {
+      console.error(e);
+    });
+  };
+  const productRecommendationsSection = document.querySelector('.product-recommendations');
+  const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
+  observer.observe(productRecommendationsSection);
+</script>
+</body>
+</html>
