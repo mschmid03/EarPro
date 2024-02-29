@@ -31,6 +31,14 @@
         "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene"
       }
     },
+    "cta_kaufen_QMLBHz": {
+      "type": "cta_kaufen",
+      "settings": {
+        "text_heading": "Einfache Anwendung und hoher Schutz",
+        "text_text": "200 Sprühstöße (100 Anwendungen)",
+        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene"
+      }
+    },
     "hover_cards": {
       "type": "hover_cards",
       "settings": {
@@ -194,6 +202,7 @@
     "hero",
     "schwimmerohr",
     "cta_kaufen",
+    "cta_kaufen_QMLBHz",
     "hover_cards",
     "icon_cta",
     "dual_image_cta",
