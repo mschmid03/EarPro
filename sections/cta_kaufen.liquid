@@ -3,10 +3,10 @@
     <div class="padding-section-large">
     <div class="w-layout-grid cta39_component shadow-medium">
     <div class="w-layout-grid cta39_card">
-    <div class="cta39_card-content">
+    <div class="cta39_card-content is-top">
     <div class="cta39_card-content-top">
     <div class="margin-bottom margin-large">
-    <h2>
+    <h2 class="heading">
 {{ section.settings.text_heading }}
 </h2>
     </div>
@@ -27,7 +27,7 @@
     keine Versandkosten    </li>
     </ul>
 <div class="margin-top margin-large">
-    <div class="button-group">
+    <div class="button-group hide-tablet">
     <a li-object:href="product.url" href="{{ product.url }}" class="button w-button">
     Zur Produktseite    </a>
 <script>
@@ -73,12 +73,12 @@
     in den Warenkorb    </a>
     </div>
     </div>
-<div>
+<div class="price_component">
 </div>
     </div>
-<div class="cta39_image-price-container">
+<div class="cta39_image-price-container is-bottom">
     <div class="cta39_image-wrapper">
-    <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 97vw, (max-width: 991px) 96vw, 40vw" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="cta39_image">
+    <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 376.953125px, (max-width: 991px) 545.59375px, 40vw" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="cta39_image">
     </div>
 <p class="cta_price-text">
     <span class="text-color-darkblue">
@@ -88,6 +88,51 @@
 
         </span>
     </p>
+<div class="button-group show-tablet is-center">
+    <a li-object:href="product.url" href="{{ product.url }}" class="button w-button">
+    Zur Produktseite    </a>
+<script>
+    document.addEventListener('alpine:init', () => {
+    Alpine.data('addToCartHandler', () => ({
+        addToCart(productId, quantity = 1) {
+            console.log('add to cart called for product id:', productId);
+
+            if(!productId) return;
+
+            let body = JSON.stringify({
+                'items': [
+                    {
+                        id: productId,
+                        quantity:  quantity,
+                    }
+                ]
+            });
+            fetch(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: body
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Item (addToCart()): ', data, data.items);
+                    this.products = data.items;
+
+                    console.log('product added');
+                    console.log('Dispatch cart events');
+                    this.$dispatch('cartupdated');
+                    this.$dispatch('toggleminicart');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        },
+    }))
+});
+
+</script>
+<a li-element="direct-add-to-cart" href="#" class="button is-secondary w-button" x-data="addToCartHandler()" @click="addToCart({{ product.selected_or_first_available_variant.id }})">
+    in den Warenkorb    </a>
+    </div>
     </div>
     </div>
     </div>

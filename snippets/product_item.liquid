@@ -5,9 +5,9 @@
     </a>
 <div class="product-item_tag_list">
     {% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
-    Not in Stock    </div>
+    Nicht verfügbar    </div>
 {% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag is-red">
-    Sale    </div>
+    Angebot    </div>
 {% endif %}    </div>
     </div>
 <div class="spacer-xxsmall">
@@ -75,11 +75,11 @@
 
 </script>
 <a li-element="direct-add-to-cart" href="#" class="button max-width-full w-button" x-data="addToCartHandler()" @click="addToCart({{ product.selected_or_first_available_variant.id }})">
-    Add to Cart    </a>
+    In den Warenkorb    </a>
     </div>
 {% endif %}{% if product.available != true %}    <div li-if="product.available != true">
     <a href="#" class="button is-secondary pointer-events-off max-width-full w-button">
-    Not in Stock    </a>
+    Ausverkauft    </a>
     </div>
 {% endif %}    </div>
     </div>

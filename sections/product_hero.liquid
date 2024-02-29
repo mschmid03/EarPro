@@ -346,11 +346,11 @@
 <div class="product-header_tag-list">
     <template x-if="selected_or_first_available_variant.available != true">
             <div li-js-if="selected_or_first_available_variant.available != true" class="product-item_tag">
-        Not in Stock        </div>
+        Ausverkauft        </div>
     </template>
 <template x-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price">
-            <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price" class="product-item_tag is-red">
-        Sale        </div>
+            <div li-js-if="selected_or_first_available_variant.compare_at_price > selected_or_first_available_variant.price" class="product-item_tag is-blue">
+        Angebot        </div>
     </template>
     </div>
     </div>
@@ -376,7 +376,7 @@
     </svg>
     </div>
 <div>
-    Delivery: <span>
+    Lieferzeit: <span>
     1–3 Days    </span>
     </div>
         </div>
@@ -397,13 +397,13 @@
     </svg>
     </div>
 <div>
-    Availability: <template x-if="selected_or_first_available_variant.available == true">
-            <span li-js-if="selected_or_first_available_variant.available == true" class="text-color-green">
-        available        </span>
+    Verfügbarkeit: <template x-if="selected_or_first_available_variant.available == true">
+            <span li-js-if="selected_or_first_available_variant.available == true" class="text-color-secondary">
+        verfügbar        </span>
     </template>
 <template x-if="selected_or_first_available_variant.available == false">
             <span li-js-if="selected_or_first_available_variant.available == false" class="text-color-red">
-        not available        </span>
+        nicht verfügbar        </span>
     </template>
     </div>
     </div>
@@ -418,7 +418,7 @@
     <template x-for="(option, optionKey) in product.options" :key="optionKey">
     <div li-element="product-options-loop" class="product-header_option">
     <div li-element="product-options-name" x-text="option">
-    Variant    </div>
+    Variante    </div>
 <div class="product-header_radio-list">
     <template x-for="(variantName, variantKey) in options_by_name[option].option.values" :key="variantName">
     <label li-element="product-option-loop" class="product-header_radio w-radio">
@@ -440,13 +440,13 @@
             <div li-js-if="selected_or_first_available_variant.available == true" class="product-header_quantity">
         <input class="form-input is-quantity w-input" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="quantity" placeholder="1" type="number" id="quantity" required="" x-model="quantity">
 <a li-element="add-to-cart" href="#" class="button max-width-full w-button" @click="addToCart()" :disabled="!addToCartButton">
-    Add to cart    </a>
+    In den Warenkorb    </a>
         </div>
     </template>
 <template x-if="selected_or_first_available_variant.available != true">
             <div li-js-if="selected_or_first_available_variant.available != true">
         <a href="#" class="button is-secondary max-width-full pointer-events-off w-button">
-    Not in Stock    </a>
+    Ausverkauft    </a>
         </div>
     </template>
     </div>

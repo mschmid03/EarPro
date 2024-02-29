@@ -5,13 +5,13 @@
     <div class="cart_table outline-solid-1">
     <div class="cart_grid is-header is-order">
     <div id="w-node-bcd6f150-7844-1b66-d054-ab3db8f0208e-6aeaa47c" class="text-size-regular">
-    Name    </div>
+    Artikel    </div>
 <div id="w-node-bcd6f150-7844-1b66-d054-ab3db8f02090-6aeaa47c" class="text-size-regular">
-    Quantity    </div>
+    Anzahl    </div>
 <div id="w-node-bcd6f150-7844-1b66-d054-ab3db8f02092-6aeaa47c" class="text-size-regular hide-mobile-portrait">
-    Price    </div>
+    Preis/Stück    </div>
 <div id="w-node-bcd6f150-7844-1b66-d054-ab3db8f02094-6aeaa47c" class="text-size-regular">
-    Sum    </div>
+    Summe    </div>
     </div>
 {% for item in order.line_items %}    <div li-for="item in order.line_items" class="cart_grid is-order">
                                     
@@ -95,7 +95,7 @@
     <div class="cart_grid is-header">
     <div id="w-node-bcd6f150-7844-1b66-d054-ab3db8f020bf-6aeaa47c" class="cart_table-header">
     <div class="text-size-regular">
-    Customer Information    </div>
+    Kundeninformationen    </div>
     </div>
     </div>
 <div class="addresses_account-wrapper content-grid">
@@ -106,26 +106,26 @@
     {{ order.created_at | date: '%e.%m.%Y' }}    </div>
 {% if order.cancelled == true %}    <div li-if="order.cancelled == true" class="order_wrapper">
     <div class="text-size-regular">
-    Canceled at:     </div>
+    Storniert am:     </div>
 <div li-object="order.cancelled_at | date: '%e.%m.%Y'" class="text-size-regular">
     {{ order.cancelled_at | date: '%e.%m.%Y' }}    </div>
     </div>
 {% endif %}<div liquid:if="order.cancelled == true" class="order_wrapper">
     <div class="text-size-regular">
-    Reason:     </div>
+    Grund:     </div>
 <div li-object="order.cancel_reason_label" class="text-size-regular">
     {{ order.cancel_reason_label }}    </div>
     </div>
     </div>
 <div>
     <div class="text-size-regular">
-    Billing Address:    </div>
+    Rechnungsadresse:    </div>
 <div li-object="order.billing_address | format_address" class="text-size-regular">
     {{ order.billing_address | format_address }}    </div>
     </div>
 <div>
     <div class="text-size-regular">
-    Shipping Address:    </div>
+    Lieferadresse:    </div>
 <div li-object="order.shipping_address | format_address" class="text-size-regular">
     {{ order.shipping_address | format_address }}    </div>
     </div>
