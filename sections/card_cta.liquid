@@ -1,4 +1,7 @@
 <div class="padding-global">
+  {% if section.settings.product_produkt %}
+    {% assign product = all_products[section.settings.product_produkt] %}
+{% endif %}
     <div class="container-large">
     <div class="padding-section-large">
     <div class="w-layout-grid cta39_component shadow-medium">
@@ -49,7 +52,7 @@
 
         </span>
 <span li-object:text="product.price" class="text-color-secondary">
-{{ product.price }}
+{{ product.price | money }}
 
         </span>
     </p>
