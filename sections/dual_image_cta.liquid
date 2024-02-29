@@ -4,7 +4,33 @@
     <div class="margin-bottom margin-medium">
     <div class="w-layout-grid cta1_component">
     <div class="cta1_content">
+    <div class="margin-bottom margin-large">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+    </div>
+<ul role="list" class="cta_list">
+    <li class="cta-list_item">
+{{ section.settings.text_bullet_1_text }}
+</li>
+<li class="cta-list_item">
+{{ section.settings.text_bullet_2_text }}
+</li>
+<li class="cta-list_item">
+{{ section.settings.text_bullet_3_text }}
+</li>
+    </ul>
+<div class="margin-top margin-large">
+    <div class="button-group">
+    <a class="button w-button" href="#">
+{{ section.settings.text_button_text_1 }}
+</a>
+<a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}"> {{ section.settings.text_button_text_2 }} </a>
+    </div>
+    </div>
+<div>
 </div>
+    </div>
 <div class="cta1_image-wrapper is-transparent-image">
     <img class="cta1_image"
      src="{{ section.settings.image_card_image | img_url: 'master' }}"
