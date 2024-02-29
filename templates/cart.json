@@ -1,24 +1,14 @@
 {
-    "sections": {
-        "header": {
-            "type": "header"
-        },
-        "predictive_search": {
-            "type": "predictive_search"
-        },
-        "cart": {
-            "type": "cart"
-        },
-        "footer": {
-            "type": "footer"
-        }
-    },
-    "layout": "cart",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header",
-        "predictive_search",
-        "cart",
-        "footer"
-    ]
+  "sections": {
+    "cart": {
+      "type": "cart",
+      "settings": {
+      }
+    }
+  },
+  "layout": "cart",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "cart"
+  ]
 }

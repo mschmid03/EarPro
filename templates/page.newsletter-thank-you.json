@@ -1,24 +1,16 @@
 {
-    "sections": {
-        "header": {
-            "type": "header"
-        },
-        "predictive_search": {
-            "type": "predictive_search"
-        },
-        "newsletter_optin": {
-            "type": "newsletter_optin"
-        },
-        "footer": {
-            "type": "footer"
-        }
-    },
-    "layout": "page.newsletter-thank-you",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header",
-        "predictive_search",
-        "newsletter_optin",
-        "footer"
-    ]
+  "sections": {
+    "newsletter_optin": {
+      "type": "newsletter_optin",
+      "settings": {
+        "text_headline": "Danke für deine Anmeldung",
+        "text_text": "Bitte aktiviere deine E-Mail"
+      }
+    }
+  },
+  "layout": "page.newsletter-thank-you",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "newsletter_optin"
+  ]
 }
