@@ -1,28 +1,20 @@
 {
-    "sections": {
-        "header": {
-            "type": "header"
-        },
-        "predictive_search": {
-            "type": "predictive_search"
-        },
-        "search_bar": {
-            "type": "search_bar"
-        },
-        "search_products": {
-            "type": "search_products"
-        },
-        "footer": {
-            "type": "footer"
-        }
+  "sections": {
+    "search_bar": {
+      "type": "search_bar",
+      "settings": {
+      }
     },
-    "layout": "search",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header",
-        "predictive_search",
-        "search_bar",
-        "search_products",
-        "footer"
-    ]
+    "search_products": {
+      "type": "search_products",
+      "settings": {
+      }
+    }
+  },
+  "layout": "search",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "search_bar",
+    "search_products"
+  ]
 }
