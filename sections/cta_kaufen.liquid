@@ -1,13 +1,17 @@
 <div class="padding-global">
     <div class="container-large">
-    <div class="padding-section-large">
-    <div class="w-layout-grid cta39_component shadow-medium">
+        <div class="padding-section-large">
+            <div class="w-layout-grid cta39_component shadow-medium">
+                {% if section.settings.product_produkt %}
+                    {% assign product = all_products[section.settings.product_produkt] %}
+                    <h2>{{ product.title }}</h2>
+                    <a href="{{ product.url }}">Product Link</a>
+                    <p>{{ product.price | money }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
-    </div>
-    </div>
-    </div>
-    
-
 
 {% schema %}
     {"tag":"section","name":"cta_kaufen","class":"section_cta-kaufen","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_text","type":"text","label":"Text","default":"200 Spr\u00fchst\u00f6\u00dfe (100 Anwendungen)"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"cta_kaufen","category":"Liquify"}]}
