@@ -1,0 +1,65 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-large">
+    <div class="text-fullwidth-image_component">
+    <div id="w-node-a6f8024e-eac2-3c71-8855-908ef8d06783-6aeaa465" class="text-fullwidth-image_text-container">
+    <div class="margin-bottom margin-large">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
+    </div>
+<div class="icon-bulletin-list_component">
+    <div class="icon-bulletin-list_item">
+    <div class="icon-bulletin-list_icon-wrapper">
+    <img class=""
+     src="{{ section.settings.image_icon_1 | img_url: 'master' }}"
+     alt="{{ section.settings.image_icon_1.alt }}"
+     loading="lazy">
+    </div>
+<p>
+{{ section.settings.text_icon_1_text }}
+</p>
+    </div>
+<div class="icon-bulletin-list_item">
+    <div class="icon-bulletin-list_icon-wrapper">
+    <img class=""
+     src="{{ section.settings.image_icon_2 | img_url: 'master' }}"
+     alt="{{ section.settings.image_icon_2.alt }}"
+     loading="lazy">
+    </div>
+<p>
+{{ section.settings.text_icon_2_text }}
+</p>
+    </div>
+<div class="icon-bulletin-list_item">
+    <div class="icon-bulletin-list_icon-wrapper">
+    <img class=""
+     src="{{ section.settings.image_icon_3 | img_url: 'master' }}"
+     alt="{{ section.settings.image_icon_3.alt }}"
+     loading="lazy">
+    </div>
+<p>
+{{ section.settings.text_icon_3_text }}
+</p>
+    </div>
+    </div>
+    </div>
+<div id="w-node-b002990b-3f8d-ba78-8a79-ef4a79cca23c-6aeaa465" class="text-fullwidth-image_image-wrapper">
+    <img class="text-fullwidth-image_image"
+     src="{{ section.settings.image_border_image | img_url: 'master' }}"
+     alt="{{ section.settings.image_border_image.alt }}"
+     loading="lazy">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"border_image_usps","class":"section_einfach-handlich","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfach handlich"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Praktisch f\u00fcr jedes Badegep\u00e4ck"},{"id":"image_icon_1","type":"image_picker","label":"Icon-1"},{"id":"text_icon_1_text","type":"text","label":"Icon-1-Text","default":"Ear Pro hinterl\u00e4sst das Ohr auf nat\u00fcrliche Weise:<br>\nEs besteht keine Notwendigkeit, es auszuwaschen."},{"id":"image_icon_2","type":"image_picker","label":"Icon-2"},{"id":"text_icon_2_text","type":"text","label":"Icon-2-Text","default":"Ear Pro hat keinen Einfluss auf Ihr Geh\u00f6r, Ihr Gleichgewicht oder Ihre F\u00e4higkeit zum Ausbalancieren."},{"id":"image_icon_3","type":"image_picker","label":"Icon-3"},{"id":"text_icon_3_text","type":"text","label":"Icon-3-Text","default":"Klappbare D\u00fcse mit perfekt dosiertem Spr\u00fchsto\u00df:<br>\n200 Spr\u00fchst\u00f6\u00dfe pro Flasche (100 Anwendungen)."},{"id":"image_border_image","type":"image_picker","label":"Border-Image"}],"presets":[{"name":"border_image_usps","category":"Liquify"}]}
+{% endschema %}

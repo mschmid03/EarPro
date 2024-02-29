@@ -1,0 +1,57 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-large">
+    <div class="image-grid-text_component">
+    <div id="w-node-b5db055a-8acb-f254-0b20-fe65c635502c-6aeaa465" class="image-grid-text_image-grid">
+    <div id="w-node-_579ad301-e003-cb14-91ae-c546b3822c19-6aeaa465" class="image-grid-text_images-wrapper is-left">
+    <div class="image-grid-text_image-container">
+    <img class="image-grid-text_image"
+     src="{{ section.settings.image_image_left_1 | img_url: 'master' }}"
+     alt="{{ section.settings.image_image_left_1.alt }}"
+     loading="lazy">
+    </div>
+<div class="image-grid-text_image-container">
+    <img class="image-grid-text_image"
+     src="{{ section.settings.image_image_left_2 | img_url: 'master' }}"
+     alt="{{ section.settings.image_image_left_2.alt }}"
+     loading="lazy">
+    </div>
+    </div>
+<div id="w-node-_2a221027-7d11-f23a-6f4b-ad4758fa16af-6aeaa465" class="image-grid-text_images-wrapper is-right">
+    <div class="image-grid-text_image-container">
+    <img class="image-grid-text_image"
+     src="{{ section.settings.image_image_right_1 | img_url: 'master' }}"
+     alt="{{ section.settings.image_image_right_1.alt }}"
+     loading="lazy">
+    </div>
+<div class="image-grid-text_image-container">
+    <img class="image-grid-text_image"
+     src="{{ section.settings.image_image_right_2 | img_url: 'master' }}"
+     alt="{{ section.settings.image_image_right_2.alt }}"
+     loading="lazy">
+    </div>
+    </div>
+    </div>
+<div id="w-node-_0bdb2271-091f-1883-3298-169b42b4d0f2-6aeaa465" class="image-grid-text_text-container">
+    <div class="margin-bottom margin-large">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
+    </div>
+<p>
+{{ section.settings.text_text }}
+</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"image_grid_usps","class":"section_sichere-anwendung","settings":[{"id":"image_image_left_1","type":"image_picker","label":"Image-Left-1"},{"id":"image_image_left_2","type":"image_picker","label":"Image-Left-2"},{"id":"image_image_right_1","type":"image_picker","label":"Image-Right-1"},{"id":"image_image_right_2","type":"image_picker","label":"Image-Right-2"},{"id":"text_heading","type":"text","label":"Heading","default":"Sichere Anwendung"},{"id":"text_subheading","type":"text","label":"Subheading","default":"vor dem Wasserkontakt"},{"id":"text_text","type":"text","label":"Text","default":"EarPro ist ein pr\u00e4ventives Ohrenspray, das dir dabei hilft Schmerzen und Bakterien im Ohr zu verhindern<br>\n<br>\nEarPro besteht zu 100\u00a0% aus nat\u00fcrlichen Inhalten besteht und kann deshalb auch bedenkenlos bei allen Altersgruppen angewendet werden.<br>\n<br>\nDie Nutzung von EarPro wird von Fach\u00e4rzten empfohlen. Es z\u00e4hlt weltweit zu den wirksamsten L\u00f6sungen gegen eingeschlossenes Wasser im Ohr und damit verbundenen Problemen.<br>\n<br>\nEarPro sorgt daf\u00fcr, dass das Wasser deinen Geh\u00f6rgan"}],"presets":[{"name":"image_grid_usps","category":"Liquify"}]}
+{% endschema %}
