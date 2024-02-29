@@ -1,4 +1,5 @@
-<div class="navbar1_container">
+<div data-animation="default" class="navbar1_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" x-data="{modals: 0}">
+    <div class="navbar1_container">
     <a href="{{ shop_locale.root_url }}" li-object:href="shop_locale.root_url" class="navbar1_logo-link w-nav-brand">
     <img src="{{ 'Logo_lowRes.png' | asset_url }}" loading="lazy" alt="" class="navbar1_logo">
     </a>
@@ -217,7 +218,7 @@
 <div li-element="mini-cart-item-count" class="navbar_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">
     1    </div>
     </div>
-<div li-element="mini-cart-container" li-cloak="hide" class="navbar_mini-cart-holder" :class="open || 'mini-cart-closed'">
+<div li-cloak="hide" li-element="mini-cart-container" class="navbar_mini-cart-holder" :class="open || 'mini-cart-closed'">
     <div li-element="mini-cart-toggle" class="navbar_mini-cart-close" @click="$dispatch('toggleminicart')">
         </div>
 <div class="mini-cart_component">
@@ -325,8 +326,9 @@
     </div>
     </div>
     </div>
-<div data-w-id="22e2fd63-3190-83b1-67b6-626b09e27847" class="navbar1_menu-button w-nav-button">
-    <div class="menu-icon1">
+<div data-w-id="8bf6dcc9-2b92-1979-3282-0f752a3c92b6" class="navbar1_menu-button w-nav-button">
+        </div>
+<div class="menu-icon1">
     <div class="menu-icon1_line-top">
         </div>
 <div class="menu-icon1_line-middle">
@@ -342,5 +344,5 @@
 
 
 {% schema %}
-    {"tag":"div","name":"header","class":"navbar1_component w-nav","blocks":[{"name":"Vorschlaege","type":"vorschlaege","settings":[{"type":"url","id":"url_link","label":"Link"},{"type":"text","id":"text_text","label":"Text","default":"Tag"}]}],"settings":[{"id":"collection_bestseller","type":"collection","label":"Bestseller"},{"id":"collection_bestseller_limit","type":"range","label":"Limit: Bestseller","default":6,"min":1,"max":99,"step":1}],"presets":[{"name":"header","category":"Liquify"}]}
+    {"tag":"div","name":"header","class":"section_navbar","blocks":[{"name":"Vorschlaege","type":"vorschlaege","settings":[{"type":"url","id":"url_link","label":"Link"},{"type":"text","id":"text_text","label":"Text","default":"Tag"}]}],"settings":[{"id":"collection_bestseller","type":"collection","label":"Bestseller"},{"id":"collection_bestseller_limit","type":"range","label":"Limit: Bestseller","default":6,"min":1,"max":99,"step":1}],"presets":[{"name":"header","category":"Liquify"}]}
 {% endschema %}
