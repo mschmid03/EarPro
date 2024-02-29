@@ -1,17 +1,101 @@
 <div class="padding-global">
     <div class="container-large">
-        <div class="padding-section-large">
-            <div class="w-layout-grid cta39_component shadow-medium">
-                {% if section.settings.product_produkt %}
-                    {% assign product = all_products[section.settings.product_produkt] %}
-                    <h2>{{ product.title }}</h2>
-                    <a href="{{ product.url }}">Product Link</a>
-                    <p>{{ product.price | money }}</p>
-                {% endif %}
-            </div>
-        </div>
+    <div class="padding-section-large">
+    <div class="w-layout-grid cta39_component shadow-medium">
+    <div class="w-layout-grid cta39_card">
+    <div class="cta39_card-content">
+    <div class="cta39_card-content-top">
+    <div class="margin-bottom margin-large">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
     </div>
+    </div>
+<ul role="list" class="cta_list">
+    <li class="cta-list_item">
+    <span>
+{{ section.settings.text_text }}
+</span>
+    </li>
+<li class="cta-list_item">
+    100 % natürliche Inhaltsstoffe    </li>
+<li class="cta-list_item">
+    Medizinische Empfehlung    </li>
+<li class="cta-list_item">
+    für alle Altersklassen    </li>
+<li class="cta-list_item">
+    keine Versandkosten    </li>
+    </ul>
+<div class="margin-top margin-large">
+    <div class="button-group">
+    <a li-object:href="product.url" href="{{ product.url }}" class="button w-button">
+    Zur Produktseite    </a>
+<script>
+    document.addEventListener('alpine:init', () => {
+    Alpine.data('addToCartHandler', () => ({
+        addToCart(productId, quantity = 1) {
+            console.log('add to cart called for product id:', productId);
+
+            if(!productId) return;
+
+            let body = JSON.stringify({
+                'items': [
+                    {
+                        id: productId,
+                        quantity:  quantity,
+                    }
+                ]
+            });
+            fetch(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: body
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Item (addToCart()): ', data, data.items);
+                    this.products = data.items;
+
+                    console.log('product added');
+                    console.log('Dispatch cart events');
+                    this.$dispatch('cartupdated');
+                    this.$dispatch('toggleminicart');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        },
+    }))
+});
+
+</script>
+<a li-element="direct-add-to-cart" href="#" class="button is-secondary w-button" x-data="addToCartHandler()" @click="addToCart({{ product.selected_or_first_available_variant.id }})">
+    in den Warenkorb    </a>
+    </div>
+    </div>
+<div>
 </div>
+    </div>
+<div class="cta39_image-price-container">
+    <div class="cta39_image-wrapper">
+    <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 97vw, (max-width: 991px) 96vw, 40vw" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="cta39_image">
+    </div>
+<p class="cta_price-text">
+    <span class="text-color-darkblue">
+    Ear Pro    </span>
+<span li-object:text="product.price | money" class="text-color-secondary">
+{{ product.price | money }}
+
+        </span>
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
 
 {% schema %}
     {"tag":"section","name":"cta_kaufen","class":"section_cta-kaufen","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_text","type":"text","label":"Text","default":"200 Spr\u00fchst\u00f6\u00dfe (100 Anwendungen)"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"cta_kaufen","category":"Liquify"}]}

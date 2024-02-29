@@ -2,7 +2,47 @@
     <div class="container-large">
     <div class="padding-section-large">
     <div class="w-layout-grid cta1_component">
+    <div class="cta1_content">
+    <div class="margin-bottom margin-large">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+    </div>
+<ul role="list" class="cta_list">
+    <li class="cta-list_item">
+{{ section.settings.text_bullet_1_text }}
+</li>
+<li class="cta-list_item">
+{{ section.settings.text_bullet_2_text }}
+</li>
+<li class="cta-list_item">
+    Sicherer Schutz für 2 Stunden    </li>
+    </ul>
+<div class="margin-top margin-large">
+    <div class="button-group">
+    <a class="button w-button" href="#">
+{{ section.settings.text_button_1_text }}
+</a>
+<a class="button is-secondary w-button" href="{{ section.settings.url_button_2_link }}"> {{ section.settings.text_button_2_text }} </a>
+    </div>
+    </div>
+<div>
 </div>
+    </div>
+<div class="cta-prefooter_image-wrapper-copy">
+    <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="431.9921875px" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="pre-footer-cta_image">
+<p class="cta_price-text">
+    <span li-object:text="product.title" class="text-color-darkblue">
+{{ product.title }}
+
+        </span>
+<span li-object:text="product.price" class="text-color-secondary">
+{{ product.price }}
+
+        </span>
+    </p>
+    </div>
+    </div>
     </div>
     </div>
     </div>
