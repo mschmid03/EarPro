@@ -1,19 +1,5 @@
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-        "collection_bestseller": "",
-        "collection_bestseller_limit": 6
-      }
-    },
-    "predictive_search": {
-      "type": "predictive_search",
-      "settings": {
-        "collection_bestseller": "",
-        "collection_bestseller_limit": 6
-      }
-    },
     "hero": {
       "type": "hero",
       "settings": {
@@ -205,8 +191,6 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "header",
-    "predictive_search",
     "hero",
     "schwimmerohr",
     "cta_kaufen",
