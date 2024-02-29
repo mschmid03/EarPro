@@ -1,0 +1,50 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-large">
+    <div class="margin-bottom margin-large">
+    <div class="text-align-center">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
+    </div>
+    </div>
+<div class="umwelt_cards-container">
+    <div id="w-node-ef9cd043-cf52-0515-8982-ebd41f8cfacf-6aeaa465" class="umwelt_cards">
+    <img class="umwelt_card-logo"
+     src="{{ section.settings.image_card_1_image | img_url: 'master' }}"
+     alt="{{ section.settings.image_card_1_image.alt }}"
+     loading="lazy">
+<div class="margin-top margin-large">
+    <div class="text-align-center">
+    <p>
+{{ section.settings.text_card_1_text }}
+</p>
+    </div>
+    </div>
+    </div>
+<div id="w-node-_8b04e513-82d0-166c-3cff-8d0f2c4983b8-6aeaa465" class="umwelt_cards">
+    <img class="umwelt_card-logo"
+     src="{{ section.settings.image_card_2_image | img_url: 'master' }}"
+     alt="{{ section.settings.image_card_2_image.alt }}"
+     loading="lazy">
+<div class="margin-top margin-large">
+    <div class="text-align-center">
+    <p>
+{{ section.settings.text_card_2_text }}
+</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"umwelt_cards","class":"section_umwelt","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Gut f\u00fcr Dich und gut f\u00fcr die Umwelt"},{"id":"text_subheading","type":"text","label":"Subheading","default":"F\u00fcr uns ist soziale und \u00f6kologische Verantwortung selbstverst\u00e4ndlich"},{"id":"image_card_1_image","type":"image_picker","label":"Card-1-Image"},{"id":"text_card_1_text","type":"text","label":"Card-1-Text","default":"EarPro ist stolz darauf, Wasserinitiativen in \u00c4thiophien \u00fcber Climate Partner im Rahmen unseren Engagements f\u00fcr den Ausgleich der CO2-Emissionen zu unterst\u00fctzen."},{"id":"image_card_2_image","type":"image_picker","label":"Card-2-Image"},{"id":"text_card_2_text","type":"text","label":"Card-2-Text","default":"EarPro ist stolzes Mitglied bei 1% for the Planet. Mit jedem Verkauf geben wir etwas zur\u00fcck, den wir Spenden 1% unseres Umsatzes f\u00fcr den Schutz und die erhaltung unserer Umwelt."}],"presets":[{"name":"umwelt_cards","category":"Liquify"}]}
+{% endschema %}
