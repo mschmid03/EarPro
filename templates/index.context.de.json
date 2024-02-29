@@ -4,5 +4,12 @@
     "market": "de"
   },
   "sections": {
+    "cta_kaufen": {
+      "settings": {
+        "product_produkt": "earpro"
+      },
+      "blocks": {
+      }
+    }
   }
 }
