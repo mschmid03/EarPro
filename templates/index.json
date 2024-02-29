@@ -1,0 +1,80 @@
+{
+    "sections": {
+        "header": {
+            "type": "header"
+        },
+        "predictive_search": {
+            "type": "predictive_search"
+        },
+        "hero": {
+            "type": "hero"
+        },
+        "schwimmerohr": {
+            "type": "schwimmerohr"
+        },
+        "cta_kaufen": {
+            "type": "cta_kaufen"
+        },
+        "hover_cards": {
+            "type": "hover_cards"
+        },
+        "icon_cta": {
+            "type": "icon_cta"
+        },
+        "dual_image_cta": {
+            "type": "dual_image_cta"
+        },
+        "stats_cta": {
+            "type": "stats_cta"
+        },
+        "card_cta": {
+            "type": "card_cta"
+        },
+        "testimonials": {
+            "type": "testimonials"
+        },
+        "umwelt_cards": {
+            "type": "umwelt_cards"
+        },
+        "border_image_usps": {
+            "type": "border_image_usps"
+        },
+        "image_grid_usps": {
+            "type": "image_grid_usps"
+        },
+        "image_text_banner": {
+            "type": "image_text_banner"
+        },
+        "faq": {
+            "type": "faq"
+        },
+        "full_width_cta": {
+            "type": "full_width_cta"
+        },
+        "footer": {
+            "type": "footer"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "header",
+        "predictive_search",
+        "hero",
+        "schwimmerohr",
+        "cta_kaufen",
+        "hover_cards",
+        "icon_cta",
+        "dual_image_cta",
+        "stats_cta",
+        "card_cta",
+        "testimonials",
+        "umwelt_cards",
+        "border_image_usps",
+        "image_grid_usps",
+        "image_text_banner",
+        "faq",
+        "full_width_cta",
+        "footer"
+    ]
+}

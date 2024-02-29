@@ -1,0 +1,82 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-vertical padding-xxlarge">
+    <div class="padding-bottom padding-xxlarge">
+    <div class="w-layout-grid footer3_top-wrapper">
+    <div class="footer3_left-wrapper">
+    <div class="margin-bottom margin-medium">
+    <a href="#" class="footer3_logo-link w-nav-brand">
+    <img src="{{ 'Logo_lowRes.png' | asset_url }}" loading="lazy" alt="">
+    </a>
+    </div>
+<div class="margin-bottom margin-medium">
+    <div class="footer3_details-wrapper">
+    <div class="margin-bottom margin-tiny">
+    <div class="text-size-small text-weight-semibold">
+{{ section.settings.text_heading_1 }}
+</div>
+    </div>
+<div class="margin-bottom margin-small">
+    <div class="text-size-small">
+{{ section.settings.text_text_1 }}
+</div>
+    </div>
+<div class="margin-bottom margin-tiny">
+    <div class="text-size-small text-weight-semibold">
+{{ section.settings.text_heading_2 }}
+</div>
+    </div>
+<div class="text-size-small">
+    <a class="text-color-white" href="{{ section.settings.url_text_2_link_top }}"> {{ section.settings.text_text_2_top }} </a>
+<a class="text-color-white" href="{{ section.settings.url_text_2_link_bottom }}"> {{ section.settings.text_text_2_bottom }} </a>
+    </div>
+    </div>
+    </div>
+<div class="w-layout-grid footer3_social-list">
+    <a class="footer3_social-link w-inline-block" href="{{ section.settings.url_facebook_link }}"> <div class="icon-embed-xsmall w-embed"> <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none"> <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="CurrentColor"> </path> </svg> </div> </a>
+<a class="footer3_social-link w-inline-block" href="{{ section.settings.url_instalink }}"> <div class="icon-embed-xsmall w-embed"> <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="CurrentColor"> </path> </svg> </div> </a>
+    </div>
+    </div>
+<div class="w-layout-grid footer3_menu-wrapper">
+    <div id="w-node-_24dc788f-b054-4f98-35d3-0f2b7c505005-7c504fde" class="footer3_link-list">
+    {% for link in linklists['main-menu'].links %}    <div li-for="link in linklists['main-menu'].links" class="footer3_link">
+                                    
+                            <a li-object:href="link.url" li-object:text="link.title" href="{{ link.url }}" class="footer3_link">
+{{ link.title }}
+
+        </a>
+
+                            
+                        </div>
+{% endfor %}    </div>
+    </div>
+    </div>
+    </div>
+<div class="line-divider">
+        </div>
+<div class="padding-top padding-medium">
+    <div class="footer3_bottom-wrapper">
+    <div class="footer3_credit-text">
+    © 2024 EarPro.    </div>
+<div class="w-layout-grid footer3_legal-list">
+    {% for link in linklists['legal'].links %}    <div li-for="link in linklists['legal'].links" class="footer3_legal-link">
+                                    
+                            <a li-object:text="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer3_legal-link">
+{{ link.title }}
+
+        </a>
+
+                            
+                        </div>
+{% endfor %}    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"footer","name":"footer","class":"footer3_component","settings":[{"id":"text_heading_1","type":"text","label":"Heading-1","default":"Address:"},{"id":"text_text_1","type":"text","label":"Text-1","default":"Level 1, 12 Sample St, Sydney NSW 2000"},{"id":"text_heading_2","type":"text","label":"Heading-2","default":"Contact:"},{"id":"url_text_2_link_top","type":"url","label":"Text-2-Link-Top"},{"id":"text_text_2_top","type":"text","label":"Text-2-Top","default":"1800 123 4567<br>\n"},{"id":"url_text_2_link_bottom","type":"url","label":"Text-2-Link-Bottom"},{"id":"text_text_2_bottom","type":"text","label":"Text-2-Bottom","default":"info@relume.io"},{"id":"url_facebook_link","type":"url","label":"Facebook-Link"},{"id":"url_instalink","type":"url","label":"Instalink"}],"presets":[{"name":"footer","category":"Liquify"}]}
+{% endschema %}

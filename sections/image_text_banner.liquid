@@ -1,0 +1,36 @@
+<div class="banner-background_container">
+    <img class="banner-background_image"
+     src="{{ section.settings.image_banner_background_image | img_url: 'master' }}"
+     alt="{{ section.settings.image_banner_background_image.alt }}"
+     loading="lazy">
+<div class="banner-background_overlay">
+        </div>
+    </div>
+<div class="padding-global">
+    <div class="container-large">
+    <div class="banner_content-container">
+    <div class="vorbeugen-banner_text-container">
+    <div class="vorbeugen-banner_text-wrapper">
+    <div class="margin-bottom margin-small">
+    <h2 class="banner_heading">
+{{ section.settings.text_banner_heading }}
+</h2>
+    </div>
+<p class="text-color-white">
+{{ section.settings.text_banner_subheading }}
+</p>
+    </div>
+<img class="vorbeugen-banner_image"
+     src="{{ section.settings.image_banner_image | img_url: 'master' }}"
+     alt="{{ section.settings.image_banner_image.alt }}"
+     loading="lazy">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"image_text_banner","class":"section_banner-vorbeugen position-relativ","settings":[{"id":"image_banner_background_image","type":"image_picker","label":"Banner-Background-Image"},{"id":"text_banner_heading","type":"text","label":"Banner-Heading","default":"\u201cVorbeugen ist besser als heilen\u201d"},{"id":"text_banner_subheading","type":"text","label":"Banner-Subheading","default":"Dr. Christoph Hufeland"},{"id":"image_banner_image","type":"image_picker","label":"Banner-Image"}],"presets":[{"name":"image_text_banner","category":"Liquify"}]}
+{% endschema %}
