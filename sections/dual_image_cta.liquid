@@ -3,7 +3,7 @@
     <div class="padding-section-large">
     <div class="margin-bottom margin-medium">
     <div class="w-layout-grid cta1_component">
-    <div class="cta1_content">
+    <div id="w-node-ef9a98c8-1b8a-b979-8055-027a6be9a101-6aeaa465" class="cta1_content">
     <div class="margin-bottom margin-large">
     <h2>
 {{ section.settings.text_heading }}
@@ -20,15 +20,15 @@
 {{ section.settings.text_bullet_3_text }}
 </li>
     </ul>
-<div class="margin-top margin-large">
-    <div class="button-group">
+<div class="margin-top margin-large hide-tablet">
+    <div class="button-group hide-tablet">
     <a class="button w-button" href="#">
 {{ section.settings.text_button_text_1 }}
 </a>
 <a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}"> {{ section.settings.text_button_text_2 }} </a>
     </div>
     </div>
-<div>
+<div class="price_component">
 </div>
     </div>
 <div class="cta1_image-wrapper is-transparent-image">
@@ -36,6 +36,14 @@
      src="{{ section.settings.image_card_image | img_url: 'master' }}"
      alt="{{ section.settings.image_card_image.alt }}"
      loading="lazy">
+    </div>
+<div class="margin-bottom margin-medium">
+    <div class="button-group is-center">
+    <a class="button w-button" href="#">
+{{ section.settings.text_button_text_1 }}
+</a>
+<a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}"> {{ section.settings.text_button_text_2 }} </a>
+    </div>
     </div>
     </div>
     </div>

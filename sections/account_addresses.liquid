@@ -6,9 +6,9 @@
                                     
                             <div class="addresses_padding is-header">
     {% if address == customer.default_address %}    <div li-if="address == customer.default_address" class="text-size-regular text-weight-bold">
-    Main Address    </div>
+    Hauptadresse    </div>
 {% endif %}{% if address != customer.default_address %}    <div li-if="address != customer.default_address" class="text-size-regular text-weight-bold">
-    Other Address    </div>
+    Andere Adressen    </div>
 {% endif %}    </div>
 
                             
@@ -89,7 +89,7 @@
     </div>
     </div>
 <a x-on:click="modal = {{ forloop.index }}" href="#" class="text-size-regular text-style-link">
-    Edit    </a>
+    Bearbeiten    </a>
 <div>
     <div class="addresses_delete-button hide">
         </div>

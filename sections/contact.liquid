@@ -21,13 +21,13 @@
     </div>
 <div class="form-field-wrapper">
     <label for="Email" class="field-label">
-    Email    </label>
+    E-Mail    </label>
 <input class="form-input w-input" maxlength="256" name="Email" data-name="Email" placeholder="" type="email" id="Email" required="">
     </div>
 <div class="form-field-wrapper">
     <label for="Message" class="field-label">
-    Message    </label>
-<textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Type your message..." required="" class="form-input is-text-area w-input">
+    Nachricht    </label>
+<textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Gib Deine Nachricht ein..." required="" class="form-input is-text-area w-input">
         </textarea>
     </div>
 <div class="margin-bottom margin-xsmall">
@@ -36,12 +36,11 @@
         </div>
 <input id="Checkbox" type="checkbox" name="Checkbox" data-name="Checkbox" required="" style="opacity:0;position:absolute;z-index:-1">
 <span for="Checkbox" class="form-checkbox-label text-size-small w-form-label">
-    I accept the <a href="#" class="text-style-link">
-    Terms    </a>
+    Ich akzeptiere die <a class="text-style-link" href="{{ section.settings.url_datenschutzklarung_link }}"> Datenschutzerklärung </a>
     </span>
     </label>
     </div>
-<input type="submit" data-wait="Please wait..." id="w-node-fc040479-f469-17e6-4116-24f85d6b36df-6aeaa472" class="button w-button" value="Submit">
+<input type="submit" data-wait="Please wait..." id="w-node-fc040479-f469-17e6-4116-24f85d6b36df-6aeaa472" class="button w-button" value="Abschicken">
 {% endform %}
 <div class="success-message w-form-done">
     <div class="success-text">
@@ -60,5 +59,5 @@
 
 
 {% schema %}
-    {"tag":"section","name":"contact","class":"section_contact","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Contact us"},{"id":"text_text","type":"text","label":"Text","default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}],"presets":[{"name":"contact","category":"Liquify"}]}
+    {"tag":"section","name":"contact","class":"section_contact","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Kontaktieren uns"},{"id":"text_text","type":"text","label":"Text","default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."},{"id":"url_datenschutzklarung_link","type":"url","label":"Datenschutzkl\u00e4rung Link"}],"presets":[{"name":"contact","category":"Liquify"}]}
 {% endschema %}

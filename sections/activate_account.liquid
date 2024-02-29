@@ -3,23 +3,23 @@
     <div class="login_tabs">
     <div class="login_form w-form">
     <h1 class="heading-style-h2 text-align-center">
-    Activate Account    </h1>
+    Account aktivieren    </h1>
 {% if form.errors %}    <div li-if="form.errors">
     <div li-object="form.errors | default_errors" class="text-size-regular text-color-red text-align-center">
     {{ form.errors | default_errors }}    </div>
     </div>
 {% endif %}{% form 'activate_customer_password' , class: 'form_form' %}
 <div class="form_field-wrapper">
-    <input class="form-input w-input" maxlength="256" name="customer[password]" data-name="" placeholder="Password" type="password" id="field" required="" >
+    <input class="form-input w-input" maxlength="256" name="customer[password]" data-name="" placeholder="Passwort" type="password" id="field" required="" >
 
     </div>
 <div class="form_field-wrapper">
-    <input class="form-input w-input" maxlength="256" name="customer[password_confirmation]" data-name="" placeholder="Repeat Password" type="password" id="field-2" required="" >
+    <input class="form-input w-input" maxlength="256" name="customer[password_confirmation]" data-name="" placeholder="Passwort wiederholen" type="password" id="field-2" required="" >
 
     </div>
 <div class="button-group">
-    <input type="submit" data-wait="" class="button max-width-full w-button" value="Activate">
-<input type="submit" data-wait="" class="button is-outline max-width-full w-button" value="Refuse" name="decline" >
+    <input type="submit" data-wait="" class="button max-width-full w-button" value="Aktivieren">
+<input type="submit" data-wait="" class="button is-outline max-width-full w-button" value="Ablehnen" name="decline" >
 
     </div>
 {% endform %}

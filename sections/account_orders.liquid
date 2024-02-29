@@ -6,7 +6,7 @@
     <div class="cart_grid is-header">
     <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739ae-6aeaa46a" class="cart_table-header">
     <div class="text-size-regular">
-    Last Order    </div>
+    Letzte Bestellung    </div>
     </div>
     </div>
 <div>
@@ -14,7 +14,7 @@
     <div class="account_single-cart-wrapper">
     <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739b5-6aeaa46a" class="account_single-cart-line">
     <div class="text-size-regular text-weight-bold">
-    Order <span li-object="customer.last_order.name">
+    Bestellung <span li-object="customer.last_order.name">
     {{ customer.last_order.name }}    </span>
     </div>
 <div li-object="customer.last_order.created_at | date: '%e.%m.%Y'" class="text-size-regular">
@@ -22,19 +22,19 @@
     </div>
 <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739bc-6aeaa46a" class="account_single-cart-line">
     <div class="text-size-regular">
-    Sum    </div>
+    Summe    </div>
 <div li-object="customer.last_order.total_price | money" class="text-size-regular">
     {{ customer.last_order.total_price | money }}    </div>
     </div>
 <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739c1-6aeaa46a" class="account_single-cart-line">
     <div class="text-size-regular">
-    Payment Status    </div>
+    Status Bezahlung    </div>
 <div li-object="customer.last_order.financial_status_label" class="text-size-regular">
     {{ customer.last_order.financial_status_label }}    </div>
     </div>
 <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739c6-6aeaa46a" class="account_single-cart-line">
     <div class="text-size-regular">
-    Delivery Status    </div>
+    Status Lieferung    </div>
 <div li-object="customer.last_order.fulfillment_status_label" class="text-size-regular">
     {{ customer.last_order.fulfillment_status_label }}    </div>
     </div>
@@ -44,19 +44,19 @@
     </div>
 {% endif %}{% if customer.orders_count == 0 %}    <div li-if="customer.orders_count == 0" class="account_single-cart-wrapper">
     <div>
-    No orders yet.    </div>
+    Noch keine Bestellungen.    </div>
 <a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="button w-button">
-    Shop now    </a>
+    Jetzt einkaufen    </a>
     </div>
 {% endif %}    </div>
     </div>
 <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d3-6aeaa46a" class="cart_table outline-solid-1">
     <div class="cart_grid is-header">
     <div item="total" id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d5-6aeaa46a" class="text-size-regular">
-    Customer Information    </div>
+    Kundeninformationen    </div>
 <div id="w-node-aa708b66-30e1-8d40-41a3-a18b79d739d7-6aeaa46a" class="cart_table-header">
     <a li-object:href="routes.account_logout_url" href="{{ routes.account_logout_url }}" class="text-size-regular text-style-link">
-    Logout    </a>
+    Ausloggen    </a>
     </div>
     </div>
 <div class="addresses_account-wrapper">
@@ -73,7 +73,7 @@
     {{ customer.default_address | format_address }}    </div>
     </address>
 <a href="../account/adresses.html" class="button w-button">
-    Add Adsress    </a>
+    Adresse hinzufügen    </a>
     </div>
     </div>
     </div>
@@ -84,23 +84,23 @@
     <div class="cart_grid is-header hide-mobil">
     <div class="cart_table-header">
     <div class="text-size-regular">
-    Order Nr.    </div>
+    Bestellnr.    </div>
     </div>
 <div class="cart_table-header">
     <div item="date" class="text-size-regular">
-    Date    </div>
+    Datum    </div>
     </div>
 <div class="cart_table-header">
     <div item="payment-status" class="text-size-regular">
-    Payment Status    </div>
+    Status Bezahlung    </div>
     </div>
 <div class="cart_table-header">
     <div item="fulfillment-status" class="text-size-regular">
-    Delivery Status    </div>
+    Status Lieferung    </div>
     </div>
 <div class="cart_table-header">
     <div item="total" class="text-size-regular">
-    Sum    </div>
+    Summe    </div>
     </div>
     </div>
 {% for order in customer.orders %}    <div li-for="order in customer.orders" class="cart_grid">

@@ -3,9 +3,9 @@
     <div class="padding-section-medium">
     <div class="headline_wrapper">
     <h2 id="w-node-e70215e6-46ed-17af-2aa7-195241f33af3-6aeaa470" class="heading-style-h2">
-    Cart    </h2>
+    Warenkorb    </h2>
 <a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="text-size-small text-style-link hide-mobile-landscape">
-    Continue shopping    </a>
+    Weiter einkaufen    </a>
     </div>
 {% if cart.item_count > 0 %}    <div li-if="cart.item_count > 0" class="w-form">
     {% form 'cart' , cart, class: 'cart_grid-wrapper' %}
@@ -13,15 +13,15 @@
     <div class="cart_grid is-header w-hidden-tiny">
     <div id="w-node-e70215e6-46ed-17af-2aa7-195241f33afb-6aeaa470" class="cart_table-header">
     <p class="text-size-regular">
-    Product    </p>
+    Produkt    </p>
     </div>
 <div class="cart_table-header">
     <p class="text-size-regular">
-    Quantity    </p>
+    Anzahl    </p>
     </div>
 <div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b01-6aeaa470" class="cart_table-header">
     <p class="text-size-regular">
-    Price    </p>
+    Preis    </p>
     </div>
     </div>
 {% for item in cart.items %}    <div li-for="item in cart.items" class="cart_grid">
@@ -46,12 +46,12 @@
                             <div id="w-node-_51dd9338-e259-f546-1410-ab7878c921c7-6aeaa470" class="cart_table-item anzahl">
     <div class="cart_quantity-wrapper">
     <div>
-    Quantity    </div>
+    Anzahl    </div>
 <input class="cart_quantity w-input" li-object:value="item.quantity" maxlength="256" name="updates[]" data-name="updates[]" placeholder="1" type="number" id="updates[]" required="" value="{{ item.quantity }}">
     </div>
 <a href="{{ item.url_to_remove }}" li-object:href="item.url_to_remove" class="text-size-tiny text-style-link text-align-center w-inline-block">
     <div li-object:url="item.url_to_remove" url="{{ item.url_to_remove }}">
-    Remove    </div>
+    Entfernen    </div>
     </a>
     </div>
 
@@ -73,14 +73,14 @@
     <div class="cart_grid is-header w-hidden-tiny">
     <div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0d-6aeaa470" class="cart_table-header">
     <p class="text-size-regular">
-    Summary    </p>
+    Zusammenfassung    </p>
     </div>
     </div>
 <div class="cart_content">
     <div class="cart_wrapper">
     <div class="cart_details-wrapper">
     <div class="text-size-regular">
-    Sum <span class="text-size-tiny">
+    Summe <span class="text-size-tiny">
     (inkl. MwSt.)    </span>
     </div>
 <div class="cart_details-price">
@@ -94,7 +94,7 @@
     </div>
 {% if cart.total_discounts > 0 %}    <div li-if="cart.total_discounts > 0" class="cart_details-wrapper">
     <div class="text-size-regular">
-    Discount    </div>
+    Rabatt    </div>
 <div li-object="cart.total_discount | money">
     {{ cart.total_discount | money }}    </div>
     </div>
@@ -111,12 +111,12 @@
     <div class="cart_grid is-header w-hidden-tiny">
     <div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b23-6aeaa470" class="cart_table-header">
     <p class="text-size-regular">
-    Comment    </p>
+    Kommentar    </p>
     </div>
     </div>
 <div class="cart_content">
     <div class="form_field-wrapper">
-    <textarea placeholder="Comment" maxlength="5000" id="CartNote" name="note" data-name="field" class="form-input is-text-area w-input">
+    <textarea placeholder="Kommentar" maxlength="5000" id="CartNote" name="note" data-name="field" class="form-input is-text-area w-input">
         </textarea>
     </div>
     </div>
@@ -134,9 +134,9 @@
     </div>
 {% endif %}{% if cart.item_count == 0 %}    <div li-if="cart.item_count == 0" class="cart_empty outline-solid-1">
     <div>
-    No Products yet.    </div>
+    Noch keine Produkte im Warenkorb    </div>
 <a href="../index.html" class="button w-button">
-    Shop Now    </a>
+    Zum Shop    </a>
     </div>
 {% endif %}    </div>
     </div>
