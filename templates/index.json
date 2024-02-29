@@ -1,80 +1,226 @@
 {
-    "sections": {
-        "header": {
-            "type": "header"
-        },
-        "predictive_search": {
-            "type": "predictive_search"
-        },
-        "hero": {
-            "type": "hero"
-        },
-        "schwimmerohr": {
-            "type": "schwimmerohr"
-        },
-        "cta_kaufen": {
-            "type": "cta_kaufen"
-        },
-        "hover_cards": {
-            "type": "hover_cards"
-        },
-        "icon_cta": {
-            "type": "icon_cta"
-        },
-        "dual_image_cta": {
-            "type": "dual_image_cta"
-        },
-        "stats_cta": {
-            "type": "stats_cta"
-        },
-        "card_cta": {
-            "type": "card_cta"
-        },
-        "testimonials": {
-            "type": "testimonials"
-        },
-        "umwelt_cards": {
-            "type": "umwelt_cards"
-        },
-        "border_image_usps": {
-            "type": "border_image_usps"
-        },
-        "image_grid_usps": {
-            "type": "image_grid_usps"
-        },
-        "image_text_banner": {
-            "type": "image_text_banner"
-        },
-        "faq": {
-            "type": "faq"
-        },
-        "full_width_cta": {
-            "type": "full_width_cta"
-        },
-        "footer": {
-            "type": "footer"
-        }
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "collection_bestseller": "",
+        "collection_bestseller_limit": 6
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header",
-        "predictive_search",
-        "hero",
-        "schwimmerohr",
-        "cta_kaufen",
-        "hover_cards",
-        "icon_cta",
-        "dual_image_cta",
-        "stats_cta",
-        "card_cta",
-        "testimonials",
-        "umwelt_cards",
-        "border_image_usps",
-        "image_grid_usps",
-        "image_text_banner",
-        "faq",
-        "full_width_cta",
-        "footer"
-    ]
+    "predictive_search": {
+      "type": "predictive_search",
+      "settings": {
+        "collection_bestseller": "",
+        "collection_bestseller_limit": 6
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "text_headline": "Unbeschwert im Wasser.",
+        "text_subheadline": "<span class=\"text-weight-bold text-style-italic\">\n    EarPro    <\/span>\nschützt vor wasserbedingten schmerzhaften Ohrenkrankheiten",
+        "text_button_text_1": "Jetzt kaufen",
+        "text_button_text_2": "Mehr erfahren",
+        "url_button_link_2": ""
+      }
+    },
+    "schwimmerohr": {
+      "type": "schwimmerohr",
+      "settings": {
+        "text_heading": "Die Nr.1 Lösung gegen “Schwimmerohr”",
+        "text_subheading": "Gegen Otitis externa und weitere wasserbedingte Ohreninfektionen",
+        "text_bild_titel_1": "Anfälligkeit von Kindern",
+        "text_bild_text_1": "In Deutschland leiden ca. 770.000 Kinder unter einer aktuen Otitis (Mittelohrentzüdnung)",
+        "text_bild_titel_2": "Langzeitschäden",
+        "text_bild_text_2": "In schweren Fällen können Ohrenentzündungen zu bleibender Schwerhörigkeit, Tinnitus und Gleichgewichtsstörungen führen.",
+        "text_bild_titel_3": "Ohrenschmerzen & Entzündungen",
+        "text_bild_text_3": "Weit verbreitet bei viel Kontakt mit Wasser sind Ohrenschmerzen, die aus Entzündungen resultieren"
+      }
+    },
+    "cta_kaufen": {
+      "type": "cta_kaufen",
+      "settings": {
+        "text_heading": "Einfache Anwendung und hoher Schutz",
+        "text_text": "200 Sprühstöße (100 Anwendungen)",
+        "product_produkt": ""
+      }
+    },
+    "hover_cards": {
+      "type": "hover_cards",
+      "settings": {
+        "text_heading": "Ein Muss für alle Wasserbegeisterten",
+        "text_subheading": "EarPro schützt deine Ohren vor Infektionen und sichert dein Hörvermögen",
+        "text_card_1_title": "Kinder & Familie",
+        "text_card_1_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "text_card_2_title": "Wasseraktivitäten",
+        "text_card_2_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "text_card_3_title": "Schwimmen",
+        "text_card_3_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "text_card_4_title": "Surfen",
+        "text_card_4_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "text_card_5_title": "Tauchen",
+        "text_card_5_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+      }
+    },
+    "icon_cta": {
+      "type": "icon_cta",
+      "settings": {
+        "text_heading": "Patentierte Formel aus natürlichen Ölen",
+        "text_subheading": "EarPro überzieht den Gehörgang mit einer wasserabweisenden Schicht",
+        "text_icon_1_title": "Für alle Altersklassen",
+        "text_icon_2_title": "Von Ärzten empfohlen",
+        "text_icon_3_title": "Natürlich und ohne Giftstoffe",
+        "text_icon_4_title": "0% Alkohol",
+        "text_icon_5_title": "Riff- und Umweltfreundlich",
+        "url_button_link": "",
+        "text_button_text": "Erfahre mehr über die Inhaltsstoffe"
+      }
+    },
+    "dual_image_cta": {
+      "type": "dual_image_cta",
+      "settings": {
+        "text_heading": "Einfache Anwendung und hoher Schutz",
+        "text_bullet_1_text": "Nie wieder Probleme mit Wasser in den Ohren",
+        "text_bullet_2_text": "Ein Sprühstoß in jedes Ohr bevor es nass wird",
+        "text_bullet_3_text": "Sicherer Schutz für 2 Stunden",
+        "text_button_text_1": "Jetzt kaufen",
+        "url_button_link_2": "",
+        "text_button_text_2": "Mehr erfahren",
+        "product_produkt": ""
+      }
+    },
+    "stats_cta": {
+      "type": "stats_cta",
+      "settings": {
+        "text_heading": "Schütze dein Gehör vor Infektionen",
+        "text_text": "Wassereinschlüsse in den Ohren sind bei Wasserliebhabern auf der ganzen Welt mit kurz- und langfristigem Hörverlust verbunden. Warum das Risiko eingehen?",
+        "text_button_text_1": "Jetzt Kaufen",
+        "text_button_text_2": "Mehr erfahren",
+        "url_button_link_2": "",
+        "text_stats_1_number": "10%",
+        "text_stats_1_text": "weltweit erkranken im Laufe Ihres Lebens an einem Schwimmerohr",
+        "text_stats_2_number": "5x",
+        "text_stats_2_text": "höheres Risiko bei Wassersportlern und Schwimmern",
+        "text_stats_3_large_number": "5-14",
+        "text_stats_3_small_number": "Jahre",
+        "text_stats_3_text": "In diesem Alter sind die Arztbesuche wegen Schwimmerohr am höchsten",
+        "product_produkt": ""
+      }
+    },
+    "card_cta": {
+      "type": "card_cta",
+      "settings": {
+        "text_heading": "Einfache Anwendung und hoher Schutz",
+        "text_bullet_1_text": "Einfache Anwendung und hoher Schutz",
+        "text_bullet_2_text": "100 % natürliche Inhaltsstoffe",
+        "text_bullet_3_text": "Medizinische Empfehlung für alle Altersklassen",
+        "text_bullet_4_text": "keine Versandkosten",
+        "text_button_text_1": "Zur Produktseite",
+        "url_button_link_2": "",
+        "text_button_text_2": "in den Warenkorb",
+        "product_produkt": ""
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "referal_slide_7Epq9c": {
+          "type": "referal-slide",
+          "settings": {
+            "text_referal_text": "Ich bekomme in den Sommermonaten aufgrund des wärmeren Wetters immer Schwimmerohren, aber seit ich EarPro benutze, habe ich mich noch nie so gut gefühlt und ich möchte tatsächlich mehr ins Wasser gehen!",
+            "text_referal_name": "Jared B.",
+            "text_referal_job_location": "Bodyboarder, Kalifornien"
+          }
+        },
+        "referal_slide_GG7fJa": {
+          "type": "referal-slide",
+          "settings": {
+            "text_referal_text": "Ich bekomme in den Sommermonaten aufgrund des wärmeren Wetters immer Schwimmerohren, aber seit ich EarPro benutze, habe ich mich noch nie so gut gefühlt und ich möchte tatsächlich mehr ins Wasser gehen!",
+            "text_referal_name": "Jared B.",
+            "text_referal_job_location": "Bodyboarder, Kalifornien"
+          }
+        }
+      },
+      "block_order": [
+        "referal_slide_7Epq9c",
+        "referal_slide_GG7fJa"
+      ],
+      "settings": {
+      }
+    },
+    "umwelt_cards": {
+      "type": "umwelt_cards",
+      "settings": {
+        "text_heading": "Gut für Dich und gut für die Umwelt",
+        "text_subheading": "Für uns ist soziale und ökologische Verantwortung selbstverständlich",
+        "text_card_1_text": "EarPro ist stolz darauf, Wasserinitiativen in Äthiophien über Climate Partner im Rahmen unseren Engagements für den Ausgleich der CO2-Emissionen zu unterstützen.",
+        "text_card_2_text": "EarPro ist stolzes Mitglied bei 1% for the Planet. Mit jedem Verkauf geben wir etwas zurück, den wir Spenden 1% unseres Umsatzes für den Schutz und die erhaltung unserer Umwelt."
+      }
+    },
+    "border_image_usps": {
+      "type": "border_image_usps",
+      "settings": {
+        "text_heading": "Einfach handlich",
+        "text_subheading": "Praktisch für jedes Badegepäck",
+        "text_icon_1_text": "Ear Pro hinterlässt das Ohr auf natürliche Weise:<br>\nEs besteht keine Notwendigkeit, es auszuwaschen.",
+        "text_icon_2_text": "Ear Pro hat keinen Einfluss auf Ihr Gehör, Ihr Gleichgewicht oder Ihre Fähigkeit zum Ausbalancieren.",
+        "text_icon_3_text": "Klappbare Düse mit perfekt dosiertem Sprühstoß:<br>\n200 Sprühstöße pro Flasche (100 Anwendungen)."
+      }
+    },
+    "image_grid_usps": {
+      "type": "image_grid_usps",
+      "settings": {
+        "text_heading": "Sichere Anwendung",
+        "text_subheading": "vor dem Wasserkontakt",
+        "text_text": "EarPro ist ein präventives Ohrenspray, das dir dabei hilft Schmerzen und Bakterien im Ohr zu verhindern<br>\n<br>\nEarPro besteht zu 100 % aus natürlichen Inhalten besteht und kann deshalb auch bedenkenlos bei allen Altersgruppen angewendet werden.<br>\n<br>\nDie Nutzung von EarPro wird von Fachärzten empfohlen. Es zählt weltweit zu den wirksamsten Lösungen gegen eingeschlossenes Wasser im Ohr und damit verbundenen Problemen.<br>\n<br>\nEarPro sorgt dafür, dass das Wasser deinen Gehörgan"
+      }
+    },
+    "image_text_banner": {
+      "type": "image_text_banner",
+      "settings": {
+        "text_banner_heading": "“Vorbeugen ist besser als heilen”",
+        "text_banner_subheading": "Dr. Christoph Hufeland"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "text_heading": "FAQ’s – Mach Dich schlau",
+        "text_subheading": "Hier findest Du alle wichtigen Antworten auf Fragen zu EarPro"
+      }
+    },
+    "full_width_cta": {
+      "type": "full_width_cta",
+      "settings": {
+        "text_heading": "Einfache Anwendung und hoher Schutz",
+        "text_bullet_1_text": "Nie wieder Probleme mit Wasser in den Ohren",
+        "text_bullet_2_text": "Ein Sprühstoß in jedes Ohr bevor es nass wird",
+        "text_button_1_text": "Jetzt kaufen",
+        "url_button_2_link": "",
+        "text_button_2_text": "Mehr erfahren",
+        "product_produkt": ""
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "header",
+    "predictive_search",
+    "hero",
+    "schwimmerohr",
+    "cta_kaufen",
+    "hover_cards",
+    "icon_cta",
+    "dual_image_cta",
+    "stats_cta",
+    "card_cta",
+    "testimonials",
+    "umwelt_cards",
+    "border_image_usps",
+    "image_grid_usps",
+    "image_text_banner",
+    "faq",
+    "full_width_cta"
+  ]
 }
