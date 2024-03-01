@@ -4,10 +4,11 @@
       "type": "hero",
       "settings": {
         "text_headline": "Unbeschwert im Wasser.",
-        "text_subheadline": "<span class=\"text-weight-bold text-style-italic\">\n    EarPro    <\/span>\nschützt vor wasserbedingten schmerzhaften Ohrenkrankheiten",
+        "text_subheadline": "EarPro    schützt vor wasserbedingten schmerzhaften Ohrenkrankheiten",
         "text_button_text_1": "Jetzt kaufen",
         "text_button_text_2": "Mehr erfahren",
         "url_button_link_2": "",
+        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene",
         "image_bild_1": "shopify:\/\/shop_images\/taucherbrille-blasen-unterwasser.jpg",
         "image_bild_2": "shopify:\/\/shop_images\/kinder-schwimmbad-schwimmhaube.jpg",
         "image_bild_3": "shopify:\/\/shop_images\/ear-pro-kinderohr.jpg",
