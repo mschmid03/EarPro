@@ -1,6 +1,10 @@
 {
   "current": {
     "checkout_logo_image": "shopify:\/\/shop_images\/Logo_lowRes.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_input_background_color_mode": "white",
+    "checkout_layout": "onepage",
     "sections": {
       "header": {
         "type": "header",
