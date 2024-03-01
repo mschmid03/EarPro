@@ -1,16 +1,9 @@
 {
   "sections": {
-    "predictive_search": {
-      "type": "predictive_search",
-      "settings": {
-        "collection_bestseller": "",
-        "collection_bestseller_limit": 6
-      }
-    },
     "product_hero": {
       "type": "product_hero",
       "custom_css": [
-        "product-header_bg-grey {backgroud-color: transpa}"
+        ".product-header_bg-grey {backgroud-color: transparent !important;}"
       ],
       "settings": {
       }
@@ -31,7 +24,6 @@
   "layout": "product",
   "wrapper": "main.main-wrapper",
   "order": [
-    "predictive_search",
     "product_hero",
     "product_description",
     "product_recommended"
