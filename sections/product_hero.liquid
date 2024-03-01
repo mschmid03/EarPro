@@ -272,29 +272,31 @@
 });
       </script>
       <script defer>
-        const priceField = document.querySelector('[li-for="product.price"]')
-        const quantityInput = document.querySelector('#quantity')
-        console.log(quantityInput)
+
+        document.addEventListener("DOMContentLoaded" , () => {
+          const priceField = document.querySelector('[li-for="product.price"]')
+          const quantityInput = document.querySelector('#quantity')
+          console.log(quantityInput)
+
+          function currencyToNumber(priceValue) {
+            priceValue = priceValue.replace(/[^\d,]/g, '');
+            return parseFloat(priceValue.replace(',', '.'));
+          }
 
 
-        function currencyToNumber(priceValue) {
-          priceValue = priceValue.replace(/[^\d,]/g, '');
-          return parseFloat(priceValue.replace(',', '.'));
-        }
+          quantityInput.addEventListener("change", () => {
+            let price = priceField.innerText
+            price = (amount * currencyToNumber(price))
 
+            // format number to Euro
+            let euro = Intl.NumberFormat('en-DE', {
+              style: 'currency',
+              currency: 'EUR',
+            });
 
-        quantityInput.addEventListener("change", () => {
-          let price = priceField.innerText
-          price = (amount * currencyToNumber(price))
+            priceField.innerText = euro.format(price)
 
-          // format number to Euro
-          let euro = Intl.NumberFormat('en-DE', {
-            style: 'currency',
-            currency: 'EUR',
-          });
-
-          priceField.innerText = euro.format(price)
-
+          })
         })
       </script>
       <div
