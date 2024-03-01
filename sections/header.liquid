@@ -322,7 +322,7 @@
                           class="text-size-regular text-weight-bold"
                           x-text="product.title"
                         >
-                          Product Title
+                          Produktname
                         </div>
                         <div class="mini-cart_line-item_price">
                           <div li-js-price="product.price" class="text-size-small" x-text="moneyFormat(product.price)">
@@ -375,7 +375,7 @@
                           :productprop="product"
                           @click="$dispatch('setcartitem', { product: product.id, quantity: 0 })"
                         >
-                          Remove
+                          Entfernen
                         </a>
                       </div>
                     </li>
@@ -384,7 +384,7 @@
               </div>
               <div class="mini-cart_footer">
                 <div class="mini-cart_footer_total">
-                  <div class="text-size-regular text-weight-bold">Subtotal</div>
+                  <div class="text-size-regular text-weight-bold">Zwischensumme</div>
                   <div>
                     <div
                       li-js-price="total.price"
@@ -438,9 +438,9 @@
                     </div>
                   </div>
                 </div>
-                <a x-bind:href="'/checkout'" href="#" class="button w-button"> Checkout </a>
+                <a x-bind:href="'/checkout'" href="#" class="button w-button"> Zum Bezahlvorgang </a>
                 <a li-object:href="routes.cart_url" href="{{ routes.cart_url }}" class="button is-secondary w-button">
-                  Cart
+                  Warenkorb
                 </a>
               </div>
             </div>
@@ -455,7 +455,7 @@
                 </div>
               </div>
               <div class="mini-cart_empty">
-                <div class="text-size-regular">No Products selected</div>
+                <div class="text-size-regular">Keine Produkte ausgewählt</div>
               </div>
             </div>
           </div>
