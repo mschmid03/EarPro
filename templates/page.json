@@ -1,22 +1,7 @@
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-      }
-    },
-    "predictive_search": {
-      "type": "predictive_search",
-      "settings": {
-      }
-    },
-    "signup_thank_you": {
-      "type": "signup_thank_you",
-      "settings": {
-      }
-    },
-    "footer": {
-      "type": "footer",
+    "default_qxBELc": {
+      "type": "default",
       "settings": {
       }
     }
@@ -24,9 +9,6 @@
   "layout": "page.signup-confirmation",
   "wrapper": "main.main-wrapper",
   "order": [
-    "header",
-    "predictive_search",
-    "signup_thank_you",
-    "footer"
+    "default_qxBELc"
   ]
 }
