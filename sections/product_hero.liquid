@@ -277,9 +277,9 @@
         console.log(quantityInput)
 
 
-        function currencyToNumber(price) {
-          let price = price.replace(/[^\d,]/g, '');
-          return parseFloat(price.replace(',', '.'));
+        function currencyToNumber(priceValue) {
+          let priceValue = priceValue.replace(/[^\d,]/g, '');
+          return parseFloat(priceValue.replace(',', '.'));
         }
 
 
