@@ -272,7 +272,6 @@
 });
       </script>
       <script defer>
-
         document.addEventListener("DOMContentLoaded" , () => {
           const priceField = document.querySelector('[li-for="product.price"]')
           const quantityInput = document.querySelector('#quantity')
@@ -286,7 +285,7 @@
 
           quantityInput.addEventListener("change", () => {
             let price = priceField.innerText
-            price = (amount * currencyToNumber(price))
+            price = (quantityInput.value * currencyToNumber(price))
 
             // format number to Euro
             let euro = Intl.NumberFormat('en-DE', {
