@@ -275,6 +275,7 @@
         document.addEventListener("DOMContentLoaded" , () => {
           const priceField = document.querySelector('[li-object="product.price"]')
           const quantityInput = document.querySelector('#quantity')
+          const priceValue = priceField.innerText
           console.log(quantityInput)
 
           function currencyToNumber(priceValue) {
