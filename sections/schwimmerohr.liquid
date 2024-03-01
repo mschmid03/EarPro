@@ -1,72 +1,76 @@
-<div class="padding-global">
-    <div class="container-large">
+<div class="padding-global" id="schwimmerohr">
+  <div class="container-large">
     <div class="padding-section-medium">
-    <div class="margin-bottom margin-large">
-    <div class="text-align-center">
-    <h2>
-{{ section.settings.text_heading }}
-</h2>
-<p class="h2_subheadline">
-{{ section.settings.text_subheading }}
-</p>
+      <div class="margin-bottom margin-large">
+        <div class="text-align-center">
+          <h2>
+            {{ section.settings.text_heading }}
+          </h2>
+          <p class="h2_subheadline">
+            {{ section.settings.text_subheading }}
+          </p>
+        </div>
+      </div>
+      <div class="triple-cards_component">
+        <div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596a1-6aeaa465" class="triple-cards_card">
+          <img
+            class="triple-card_image"
+            src="{{ section.settings.image_bild_1 | img_url: 'master' }}"
+            alt="{{ section.settings.image_bild_1.alt }}"
+            loading="lazy"
+          >
+          <div class="triple-cards_text-wrapper">
+            <div class="margin-bottom margin-xsmall">
+              <h3>
+                {{ section.settings.text_bild_titel_1 }}
+              </h3>
+            </div>
+            <p class="triple-cards_text">
+              {{ section.settings.text_bild_text_1 }}
+            </p>
+          </div>
+        </div>
+        <div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596a9-6aeaa465" class="triple-cards_card">
+          <img
+            class="triple-card_image"
+            src="{{ section.settings.image_bild_2 | img_url: 'master' }}"
+            alt="{{ section.settings.image_bild_2.alt }}"
+            loading="lazy"
+          >
+          <div class="triple-cards_text-wrapper">
+            <div class="margin-bottom margin-xsmall">
+              <h3>
+                {{ section.settings.text_bild_titel_2 }}
+              </h3>
+            </div>
+            <p class="triple-cards_text">
+              {{ section.settings.text_bild_text_2 }}
+            </p>
+          </div>
+        </div>
+        <div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596b1-6aeaa465" class="triple-cards_card">
+          <img
+            class="triple-card_image"
+            src="{{ section.settings.image_bild_3 | img_url: 'master' }}"
+            alt="{{ section.settings.image_bild_3.alt }}"
+            loading="lazy"
+          >
+          <div class="triple-cards_text-wrapper">
+            <div class="margin-bottom margin-xsmall">
+              <h3>
+                {{ section.settings.text_bild_titel_3 }}
+              </h3>
+            </div>
+            <p class="triple-cards_text">
+              {{ section.settings.text_bild_text_3 }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-<div class="triple-cards_component">
-    <div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596a1-6aeaa465" class="triple-cards_card">
-    <img class="triple-card_image"
-     src="{{ section.settings.image_bild_1 | img_url: 'master' }}"
-     alt="{{ section.settings.image_bild_1.alt }}"
-     loading="lazy">
-<div class="triple-cards_text-wrapper">
-    <div class="margin-bottom margin-xsmall">
-    <h3>
-{{ section.settings.text_bild_titel_1 }}
-</h3>
-    </div>
-<p class="triple-cards_text">
-{{ section.settings.text_bild_text_1 }}
-</p>
-    </div>
-    </div>
-<div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596a9-6aeaa465" class="triple-cards_card">
-    <img class="triple-card_image"
-     src="{{ section.settings.image_bild_2 | img_url: 'master' }}"
-     alt="{{ section.settings.image_bild_2.alt }}"
-     loading="lazy">
-<div class="triple-cards_text-wrapper">
-    <div class="margin-bottom margin-xsmall">
-    <h3>
-{{ section.settings.text_bild_titel_2 }}
-</h3>
-    </div>
-<p class="triple-cards_text">
-{{ section.settings.text_bild_text_2 }}
-</p>
-    </div>
-    </div>
-<div id="w-node-acc6e4e8-3b6a-8929-926c-c5e50a2596b1-6aeaa465" class="triple-cards_card">
-    <img class="triple-card_image"
-     src="{{ section.settings.image_bild_3 | img_url: 'master' }}"
-     alt="{{ section.settings.image_bild_3.alt }}"
-     loading="lazy">
-<div class="triple-cards_text-wrapper">
-    <div class="margin-bottom margin-xsmall">
-    <h3>
-{{ section.settings.text_bild_titel_3 }}
-</h3>
-    </div>
-<p class="triple-cards_text">
-{{ section.settings.text_bild_text_3 }}
-</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-
+  </div>
+</div>
 
 {% schema %}
-    {"tag":"section","name":"schwimmerohr","class":"section_schwimmerohr","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Die Nr.1 L\u00f6sung gegen \u201cSchwimmerohr\u201d"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Gegen Otitis externa und weitere wasserbedingte Ohreninfektionen"},{"id":"image_bild_1","type":"image_picker","label":"Bild 1"},{"id":"text_bild_titel_1","type":"text","label":"Bild-Titel 1","default":"Anf\u00e4lligkeit von Kindern"},{"id":"text_bild_text_1","type":"text","label":"Bild-Text 1","default":"In Deutschland leiden ca. 770.000 Kinder unter einer aktuen Otitis (Mittelohrentz\u00fcdnung)"},{"id":"image_bild_2","type":"image_picker","label":"Bild 2"},{"id":"text_bild_titel_2","type":"text","label":"Bild-Titel 2","default":"Langzeitsch\u00e4den"},{"id":"text_bild_text_2","type":"text","label":"Bild-Text 2","default":"In schweren F\u00e4llen k\u00f6nnen Ohrenentz\u00fcndungen zu bleibender Schwerh\u00f6rigkeit, Tinnitus und Gleichgewichtsst\u00f6rungen f\u00fchren."},{"id":"image_bild_3","type":"image_picker","label":"Bild 3"},{"id":"text_bild_titel_3","type":"text","label":"Bild-Titel 3","default":"Ohrenschmerzen & Entz\u00fcndungen"},{"id":"text_bild_text_3","type":"text","label":"Bild-Text 3","default":"Weit verbreitet bei viel Kontakt mit Wasser sind Ohrenschmerzen, die aus Entz\u00fcndungen resultieren"}],"presets":[{"name":"schwimmerohr","category":"Liquify"}]}
+{"tag":"section","name":"schwimmerohr","class":"section_schwimmerohr","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Die Nr.1 L\u00f6sung gegen \u201cSchwimmerohr\u201d"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Gegen Otitis externa und weitere wasserbedingte Ohreninfektionen"},{"id":"image_bild_1","type":"image_picker","label":"Bild 1"},{"id":"text_bild_titel_1","type":"text","label":"Bild-Titel 1","default":"Anf\u00e4lligkeit von Kindern"},{"id":"text_bild_text_1","type":"text","label":"Bild-Text 1","default":"In Deutschland leiden ca. 770.000 Kinder unter einer aktuen Otitis (Mittelohrentz\u00fcdnung)"},{"id":"image_bild_2","type":"image_picker","label":"Bild 2"},{"id":"text_bild_titel_2","type":"text","label":"Bild-Titel 2","default":"Langzeitsch\u00e4den"},{"id":"text_bild_text_2","type":"text","label":"Bild-Text 2","default":"In schweren F\u00e4llen k\u00f6nnen Ohrenentz\u00fcndungen zu bleibender Schwerh\u00f6rigkeit, Tinnitus und Gleichgewichtsst\u00f6rungen f\u00fchren."},{"id":"image_bild_3","type":"image_picker","label":"Bild 3"},{"id":"text_bild_titel_3","type":"text","label":"Bild-Titel 3","default":"Ohrenschmerzen & Entz\u00fcndungen"},{"id":"text_bild_text_3","type":"text","label":"Bild-Text 3","default":"Weit verbreitet bei viel Kontakt mit Wasser sind Ohrenschmerzen, die aus Entz\u00fcndungen resultieren"}],"presets":[{"name":"schwimmerohr","category":"Liquify"}]}
 {% endschema %}
