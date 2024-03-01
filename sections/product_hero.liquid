@@ -271,6 +271,32 @@
     }))
 });
       </script>
+      <script defer>
+        const priceField = document.querySelector('[li-for="product.price"]')
+        const quantityInput = document.querySelector('#quantity')
+
+
+
+        function currencyToNumber(price) {
+          let price = price.replace(/[^\d,]/g, '');
+          return parseFloat(price.replace(',', '.'));
+        }
+
+
+        quantityInput.addEventListener("change", () => {
+          let price = priceField.innerText
+          price = (amount * currencyToNumber(price))
+
+          // format number to Euro
+          let euro = Intl.NumberFormat('en-DE', {
+            style: 'currency',
+            currency: 'EUR',
+          });
+
+          priceField.innerText = euro.format(price)
+
+        })
+      </script>
       <div
         li-element="product-variant-container"
         class="w-layout-grid product-header_layout"
