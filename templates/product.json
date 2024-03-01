@@ -9,6 +9,9 @@
     },
     "product_hero": {
       "type": "product_hero",
+      "custom_css": [
+        "product-header_bg-grey {backgroud-color: transpa}"
+      ],
       "settings": {
       }
     },
