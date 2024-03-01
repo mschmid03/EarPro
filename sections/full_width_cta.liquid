@@ -1,64 +1,67 @@
 <div class="padding-global">
   {% if section.settings.product_produkt %}
     {% assign product = all_products[section.settings.product_produkt] %}
-{% endif %}
+  {% endif %}
 
-    <div class="container-large">
+  <div class="container-large">
     <div class="padding-section-large">
-    <div class="w-layout-grid cta1_component">
-    <div id="w-node-a1ab3988-fb7f-bbe2-686d-4c99dcf287d4-6aeaa465" class="cta1_content is-prefooter">
-    <div class="margin-bottom margin-large">
-    <h2>
-{{ section.settings.text_heading }}
-</h2>
+      <div class="w-layout-grid cta1_component">
+        <div id="w-node-a1ab3988-fb7f-bbe2-686d-4c99dcf287d4-6aeaa465" class="cta1_content is-prefooter">
+          <div class="margin-bottom margin-large">
+            <h2>
+              {{ section.settings.text_heading }}
+            </h2>
+          </div>
+          <ul role="list" class="cta_list">
+            <li class="cta-list_item">
+              {{ section.settings.text_bullet_1_text }}
+            </li>
+            <li class="cta-list_item">
+              {{ section.settings.text_bullet_2_text }}
+            </li>
+            <li class="cta-list_item">Sicherer Schutz für 2 Stunden</li>
+          </ul>
+          <div class="margin-top margin-large">
+            <div class="button-group hide-tablet">
+              <a class="button w-button" href="{{ product.url }}">
+                {{ section.settings.text_button_1_text }}
+              </a>
+              <a class="button is-secondary w-button" href="{{ section.settings.url_button_2_link }}">
+                {{ section.settings.text_button_2_text }}
+              </a>
+            </div>
+          </div>
+          <div class="price_component"></div>
+        </div>
+        <div class="cta-prefooter_image-wrapper-copy">
+          <img
+            src="{{ 'earpro-bottle2.webp' | asset_url }}"
+            loading="lazy"
+            sizes="(max-width: 767px) 367.9921875px, (max-width: 991px) 519.9921875px, 431.9921875px"
+            srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w"
+            alt=""
+            class="pre-footer-cta_image"
+          >
+          <p class="cta_price-text">
+            <span li-object:text="product.title" class="text-color-darkblue"> EarPro </span>
+            <span li-object:text="product.price | money" class="text-color-secondary">
+              {{ product.price | money }}
+            </span>
+          </p>
+          <div class="button-group show-tablet is-center">
+            <a class="button w-button" href="#">
+              {{ section.settings.text_button_1_text }}
+            </a>
+            <a class="button is-secondary w-button" href="{{ section.settings.url_button_2_link }}">
+              {{ section.settings.text_button_2_text }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-<ul role="list" class="cta_list">
-    <li class="cta-list_item">
-{{ section.settings.text_bullet_1_text }}
-</li>
-<li class="cta-list_item">
-{{ section.settings.text_bullet_2_text }}
-</li>
-<li class="cta-list_item">
-    Sicherer Schutz für 2 Stunden    </li>
-    </ul>
-<div class="margin-top margin-large">
-    <div class="button-group hide-tablet">
-    <a class="button w-button" href="#">
-{{ section.settings.text_button_1_text }}
-</a>
-<a class="button is-secondary w-button" href="{{ section.settings.url_button_2_link }}"> {{ section.settings.text_button_2_text }} </a>
-    </div>
-    </div>
-<div class="price_component">
+  </div>
 </div>
-    </div>
-<div class="cta-prefooter_image-wrapper-copy">
-    <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="(max-width: 767px) 367.9921875px, (max-width: 991px) 519.9921875px, 431.9921875px" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="pre-footer-cta_image">
-<p class="cta_price-text">
-    <span li-object:text="product.title" class="text-color-darkblue">
-EarPro
-
-        </span>
-<span li-object:text="product.price | money" class="text-color-secondary">
-{{ product.price | money }}
-
-        </span>
-    </p>
-<div class="button-group show-tablet is-center">
-    <a class="button w-button" href="#">
-{{ section.settings.text_button_1_text }}
-</a>
-<a class="button is-secondary w-button" href="{{ section.settings.url_button_2_link }}"> {{ section.settings.text_button_2_text }} </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-
 
 {% schema %}
-    {"tag":"section","name":"full_width_cta","class":"section_pre-footer-cta background-color-grey","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_bullet_1_text","type":"text","label":"Bullet-1-Text","default":"Nie wieder Probleme mit Wasser in den Ohren"},{"id":"text_bullet_2_text","type":"text","label":"Bullet-2-Text","default":"Ein Spr\u00fchsto\u00df in jedes Ohr bevor es nass wird"},{"id":"text_button_1_text","type":"text","label":"Button-1-Text","default":"Jetzt kaufen"},{"id":"url_button_2_link","type":"url","label":"Button-2-Link"},{"id":"text_button_2_text","type":"text","label":"Button-2-Text","default":"Mehr erfahren"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"full_width_cta","category":"Liquify"}]}
+{"tag":"section","name":"full_width_cta","class":"section_pre-footer-cta background-color-grey","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_bullet_1_text","type":"text","label":"Bullet-1-Text","default":"Nie wieder Probleme mit Wasser in den Ohren"},{"id":"text_bullet_2_text","type":"text","label":"Bullet-2-Text","default":"Ein Spr\u00fchsto\u00df in jedes Ohr bevor es nass wird"},{"id":"text_button_1_text","type":"text","label":"Button-1-Text","default":"Jetzt kaufen"},{"id":"url_button_2_link","type":"url","label":"Button-2-Link"},{"id":"text_button_2_text","type":"text","label":"Button-2-Text","default":"Mehr erfahren"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"full_width_cta","category":"Liquify"}]}
 {% endschema %}
