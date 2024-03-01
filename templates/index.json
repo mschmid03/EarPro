@@ -7,7 +7,13 @@
         "text_subheadline": "<span class=\"text-weight-bold text-style-italic\">\n    EarPro    <\/span>\nschützt vor wasserbedingten schmerzhaften Ohrenkrankheiten",
         "text_button_text_1": "Jetzt kaufen",
         "text_button_text_2": "Mehr erfahren",
-        "url_button_link_2": ""
+        "url_button_link_2": "",
+        "image_bild_1": "shopify:\/\/shop_images\/taucherbrille-blasen-unterwasser.jpg",
+        "image_bild_2": "shopify:\/\/shop_images\/kinder-schwimmbad-schwimmhaube.jpg",
+        "image_bild_3": "shopify:\/\/shop_images\/ear-pro-kinderohr.jpg",
+        "image_bild_4": "shopify:\/\/shop_images\/junge-schwimmring.jpg",
+        "image_bild_5": "shopify:\/\/shop_images\/ear-pro-surfergirl-strand.jpg",
+        "image_bild_6": "shopify:\/\/shop_images\/earpro-in-hand-wueste.jpg"
       }
     },
     "schwimmerohr": {
@@ -15,10 +21,13 @@
       "settings": {
         "text_heading": "Die Nr.1 Lösung gegen “Schwimmerohr”",
         "text_subheading": "Gegen Otitis externa und weitere wasserbedingte Ohreninfektionen",
+        "image_bild_1": "shopify:\/\/shop_images\/maedchen-jung-sitzt-in-wasser.jpg",
         "text_bild_titel_1": "Anfälligkeit von Kindern",
         "text_bild_text_1": "In Deutschland leiden ca. 770.000 Kinder unter einer aktuen Otitis (Mittelohrentzüdnung)",
+        "image_bild_2": "shopify:\/\/shop_images\/doktor-setzt-hoergeraet-ein.jpg",
         "text_bild_titel_2": "Langzeitschäden",
         "text_bild_text_2": "In schweren Fällen können Ohrenentzündungen zu bleibender Schwerhörigkeit, Tinnitus und Gleichgewichtsstörungen führen.",
+        "image_bild_3": "shopify:\/\/shop_images\/maedchen-jung-ohren-zu-halten.jpg",
         "text_bild_titel_3": "Ohrenschmerzen & Entzündungen",
         "text_bild_text_3": "Weit verbreitet bei viel Kontakt mit Wasser sind Ohrenschmerzen, die aus Entzündungen resultieren"
       }
@@ -38,14 +47,19 @@
         "text_subheading": "EarPro schützt deine Ohren vor Infektionen und sichert dein Hörvermögen",
         "text_card_1_title": "Kinder & Familie",
         "text_card_1_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "image_card_1_image": "shopify:\/\/shop_images\/familie-rennt-strand.jpg",
         "text_card_2_title": "Wasseraktivitäten",
         "text_card_2_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "image_card_2_image": "shopify:\/\/shop_images\/kitesurfer-am-surfen.jpg",
         "text_card_3_title": "Schwimmen",
         "text_card_3_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "image_card_3_image": "shopify:\/\/shop_images\/schwimmer-schwimmt.jpg",
         "text_card_4_title": "Surfen",
         "text_card_4_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "image_card_4_image": "shopify:\/\/shop_images\/surfer-surft-welle-surfboard.jpg",
         "text_card_5_title": "Tauchen",
-        "text_card_5_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+        "text_card_5_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+        "image_card_5_image": "shopify:\/\/shop_images\/taucher-unterwasser-blasen.jpg"
       }
     },
     "icon_cta": {
@@ -53,10 +67,15 @@
       "settings": {
         "text_heading": "Patentierte Formel aus natürlichen Ölen",
         "text_subheading": "EarPro überzieht den Gehörgang mit einer wasserabweisenden Schicht",
+        "image_icon_1": "shopify:\/\/shop_images\/icon-familie.png",
         "text_icon_1_title": "Für alle Altersklassen",
+        "image_icon_2": "shopify:\/\/shop_images\/icon-kreuz.png",
         "text_icon_2_title": "Von Ärzten empfohlen",
+        "image_icon_3": "shopify:\/\/shop_images\/icon-pflanze.png",
         "text_icon_3_title": "Natürlich und ohne Giftstoffe",
+        "image_icon_4": "shopify:\/\/shop_images\/icon_tropfen.png",
         "text_icon_4_title": "0% Alkohol",
+        "image_icon_5": "shopify:\/\/shop_images\/icon-riff.png",
         "text_icon_5_title": "Riff- und Umweltfreundlich",
         "url_button_link": "",
         "text_button_text": "Erfahre mehr über die Inhaltsstoffe"
@@ -72,7 +91,9 @@
         "text_button_text_1": "Jetzt kaufen",
         "url_button_link_2": "",
         "text_button_text_2": "Mehr erfahren",
-        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene"
+        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene",
+        "image_card_image": "shopify:\/\/shop_images\/nutzungsanleitung-earpro.webp",
+        "image_large_image": "shopify:\/\/shop_images\/kinder-taucherbrille-tropisches-meer.jpg"
       }
     },
     "stats_cta": {
@@ -104,7 +125,8 @@
         "text_button_text_1": "Zur Produktseite",
         "url_button_link_2": "",
         "text_button_text_2": "in den Warenkorb",
-        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene"
+        "product_produkt": "earpro®-naturliches-ohrenspray-fur-kinder-und-erwachsene",
+        "image_image": "shopify:\/\/shop_images\/earpro-bottle2.webp"
       }
     },
     "testimonials": {
@@ -139,7 +161,9 @@
       "settings": {
         "text_heading": "Gut für Dich und gut für die Umwelt",
         "text_subheading": "Für uns ist soziale und ökologische Verantwortung selbstverständlich",
+        "image_card_1_image": "shopify:\/\/shop_images\/climate-neutral-logo.png",
         "text_card_1_text": "EarPro ist stolz darauf, Wasserinitiativen in Äthiophien über Climate Partner im Rahmen unseren Engagements für den Ausgleich der CO2-Emissionen zu unterstützen.",
+        "image_card_2_image": "shopify:\/\/shop_images\/1-for-the-planet.png",
         "text_card_2_text": "EarPro ist stolzes Mitglied bei 1% for the Planet. Mit jedem Verkauf geben wir etwas zurück, den wir Spenden 1% unseres Umsatzes für den Schutz und die erhaltung unserer Umwelt."
       }
     },
@@ -148,14 +172,22 @@
       "settings": {
         "text_heading": "Einfach handlich",
         "text_subheading": "Praktisch für jedes Badegepäck",
+        "image_icon_1": "shopify:\/\/shop_images\/icon_ohr1.png",
         "text_icon_1_text": "Ear Pro hinterlässt das Ohr auf natürliche Weise:<br>\nEs besteht keine Notwendigkeit, es auszuwaschen.",
+        "image_icon_2": "shopify:\/\/shop_images\/icon_ohr2.png",
         "text_icon_2_text": "Ear Pro hat keinen Einfluss auf Ihr Gehör, Ihr Gleichgewicht oder Ihre Fähigkeit zum Ausbalancieren.",
-        "text_icon_3_text": "Klappbare Düse mit perfekt dosiertem Sprühstoß:<br>\n200 Sprühstöße pro Flasche (100 Anwendungen)."
+        "image_icon_3": "shopify:\/\/shop_images\/icon_spruehstoss.png",
+        "text_icon_3_text": "Klappbare Düse mit perfekt dosiertem Sprühstoß:<br>\n200 Sprühstöße pro Flasche (100 Anwendungen).",
+        "image_border_image": "shopify:\/\/shop_images\/earpro-on-hand.webp"
       }
     },
     "image_grid_usps": {
       "type": "image_grid_usps",
       "settings": {
+        "image_image_left_1": "shopify:\/\/shop_images\/familie-rennt-strand2.jpg",
+        "image_image_left_2": "shopify:\/\/shop_images\/junge-sprung-pool.jpg",
+        "image_image_right_1": "shopify:\/\/shop_images\/ear-pro-kinderohr.jpg",
+        "image_image_right_2": "shopify:\/\/shop_images\/schnorchler-unter-wasser-fischschwarm.jpg",
         "text_heading": "Sichere Anwendung",
         "text_subheading": "vor dem Wasserkontakt",
         "text_text": "EarPro ist ein präventives Ohrenspray, das dir dabei hilft Schmerzen und Bakterien im Ohr zu verhindern<br>\n<br>\nEarPro besteht zu 100 % aus natürlichen Inhalten besteht und kann deshalb auch bedenkenlos bei allen Altersgruppen angewendet werden.<br>\n<br>\nDie Nutzung von EarPro wird von Fachärzten empfohlen. Es zählt weltweit zu den wirksamsten Lösungen gegen eingeschlossenes Wasser im Ohr und damit verbundenen Problemen.<br>\n<br>\nEarPro sorgt dafür, dass das Wasser deinen Gehörgan"
@@ -165,11 +197,24 @@
       "type": "image_text_banner",
       "settings": {
         "text_banner_heading": "“Vorbeugen ist besser als heilen”",
-        "text_banner_subheading": "Dr. Christoph Hufeland"
+        "text_banner_subheading": "Dr. Christoph Hufeland",
+        "image_banner_image": "shopify:\/\/shop_images\/earpro-bottle.webp"
       }
     },
     "faq": {
       "type": "faq",
+      "blocks": {
+        "faq_accordion_left_3K3BJk": {
+          "type": "faq-accordion-left",
+          "settings": {
+            "text_faq_title": "WAS IST EINGESCHLOSSENES WASSER?",
+            "text_faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+          }
+        }
+      },
+      "block_order": [
+        "faq_accordion_left_3K3BJk"
+      ],
       "settings": {
         "text_heading": "FAQ’s – Mach Dich schlau",
         "text_subheading": "Hier findest Du alle wichtigen Antworten auf Fragen zu EarPro"
