@@ -3,7 +3,7 @@
     "product_hero": {
       "type": "product_hero",
       "custom_css": [
-        ".product-header_bg-grey {backgroud-color: transparent !important;}"
+        ".product-header_bg-grey {backgroud-color: white!important;}"
       ],
       "settings": {
       }
