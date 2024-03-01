@@ -1,31 +1,32 @@
 {
-    "sections": {
-        "header": {
-            "type": "header"
-        },
-        "predictive_search": {
-            "type": "predictive_search"
-        },
-        "contact": {
-            "type": "contact"
-        },
-        "footer": {
-            "type": "footer"
-        },
-        "default": {
-            "type": "default"
-        }
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+      }
     },
-    "layout": "page",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "header",
-        "predictive_search",
-        "contact",
-        "footer",
-        "header",
-        "predictive_search",
-        "default",
-        "footer"
-    ]
+    "predictive_search": {
+      "type": "predictive_search",
+      "settings": {
+      }
+    },
+    "signup_thank_you": {
+      "type": "signup_thank_you",
+      "settings": {
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "layout": "page.signup-confirmation",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "header",
+    "predictive_search",
+    "signup_thank_you",
+    "footer"
+  ]
 }
