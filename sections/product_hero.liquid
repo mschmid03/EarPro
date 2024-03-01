@@ -278,7 +278,7 @@
 
 
         function currencyToNumber(priceValue) {
-          let priceValue = priceValue.replace(/[^\d,]/g, '');
+          priceValue = priceValue.replace(/[^\d,]/g, '');
           return parseFloat(priceValue.replace(',', '.'));
         }
 
