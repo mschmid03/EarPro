@@ -196,6 +196,7 @@
     "image_text_banner": {
       "type": "image_text_banner",
       "settings": {
+        "image_banner_background_image": "shopify:\/\/shop_images\/earpro-in-ohr.jpg",
         "text_banner_heading": "“Vorbeugen ist besser als heilen”",
         "text_banner_subheading": "Dr. Christoph Hufeland",
         "image_banner_image": "shopify:\/\/shop_images\/earpro-bottle.webp"
