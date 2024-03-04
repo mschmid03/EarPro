@@ -210,12 +210,43 @@
           "type": "faq-accordion-left",
           "settings": {
             "text_faq_title": "WAS IST EINGESCHLOSSENES WASSER?",
-            "text_faq_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+            "text_faq_answer": "Eingeschlossenes Wasser bedeutet, dass Wasser im Gehörgang stecken bleibt. Eingeschlossenes Wasser ist ein häufiges Problem, besonders wenn Sie viel Zeit im Wasser verbringen. Eingeschlossenes Wasser verursacht typischerweise ein verstopftes Gefühl und Geräusche erscheinen oft gedämpft. Viele Menschen leiden unter Ohrenschmerzen, Tinnitus sowie Koordinations- und Gleichgewichtsstörungen. Unbehandelt besteht das Risiko, ein Schwimmerohr, Surferohr oder andere Infektionen zu entwickeln, die zu einem Hörverlust führen können."
+          }
+        },
+        "faq_accordion_left_zgT6gK": {
+          "type": "faq-accordion-left",
+          "settings": {
+            "text_faq_title": "WAS IST EIN SCHWIMMEROHR?",
+            "text_faq_answer": "Schwimmerohr, auch bekannt als (Swimmer’s Ear) oder Otitis Externa, ist eine Entzündung des äußeren Gehörgangs. Die häufigste Ursache dieser Infektion ist im Ohr eingeschlossenes Wasser, zum Beispiel nach dem Schwimmen oder Tauchen, das die Vermehrung von Bakterien im Ohr begünstigt. Schwimmerohr kann auch durch Wattestäbchen oder andere Objekte im Ohr verursacht werden, die die empfindliche Haut im Gehörgang beschädigen."
+          }
+        },
+        "faq_accordion_left_3zDqJq": {
+          "type": "faq-accordion-left",
+          "settings": {
+            "text_faq_title": "WIE VERBREITET IST DAS SCHWIMMEROHR?",
+            "text_faq_answer": "Etwa 10% aller Menschen leiden irgendwann in ihrem Leben an Schwimmerohr."
+          }
+        },
+        "faq_accordion_left_gUUpMz": {
+          "type": "faq-accordion-left",
+          "settings": {
+            "text_faq_title": "WAS SIND DIE SYMPTOME DES SCHWIMMEROHRS?",
+            "text_faq_answer": "Schwimmerohr kann unterschiedliche Symptome auslösen. Die häufigsten Beschwerden sind:  Juckreiz Leichte bis starke Rötung und Schwellung im Ohr Moderate symptoms can include intensifying itching, redness and fluid drainage, pain, swelling of your ear canal and decreased hearing Leichte bis starke Schmerzen Taubheitsgefühl im Ohr Fieber und Krankheitsgefühl bei ausgeprägter Entzündung Wir empfehlen dir deinen Arzt zu kontaktieren, sobald du leichte Symptome von Schwimmerohr (Swimmer’s Ear) feststellst. Solltest du starke Schmerzen oder Fieber haben, suche bitte umgehend einen Arzt oder die Notaufnahme auf."
+          }
+        },
+        "faq_accordion_right_93JLKY": {
+          "type": "faq-accordion-right",
+          "settings": {
+            "text_faq_title": "WARUM IST WASSER IM OHR GEFÄHRLICH?"
           }
         }
       },
       "block_order": [
-        "faq_accordion_left_3K3BJk"
+        "faq_accordion_left_3K3BJk",
+        "faq_accordion_left_zgT6gK",
+        "faq_accordion_left_3zDqJq",
+        "faq_accordion_left_gUUpMz",
+        "faq_accordion_right_93JLKY"
       ],
       "settings": {
         "text_heading": "FAQ’s – Mach Dich schlau",
