@@ -237,7 +237,29 @@
         "faq_accordion_right_93JLKY": {
           "type": "faq-accordion-right",
           "settings": {
-            "text_faq_title": "WARUM IST WASSER IM OHR GEFÄHRLICH?"
+            "text_faq_title": "WARUM IST WASSER IM OHR GEFÄHRLICH?",
+            "text_faq_answer": "Wasser im Ohr ist kein lebensbedrohlicher Zustand, kann aber zu starken Schmerzen, einer Ohrentzündung und der Einnahme von Antibiotika führen. Im schlimmsten Fall entsteht eine Infektion, bekannt als Schwimmerohr (Swimmer’s Ear). Diese kann Gewebeinfektionen (Cellulitis), Knochen- und Knorpelschäden oder nekrotisierende Otitis Externa zur Folge haben. Wenn im Ohr eingeschlossenes Wasser nicht entfernt wird, besteht ein erhöhtes Risiko für permanente Hörschäden. Du solltest daher vermeiden, dass Wasser im Ohr eingeschlossen wird."
+          }
+        },
+        "faq_accordion_right_MHp7tz": {
+          "type": "faq-accordion-right",
+          "settings": {
+            "text_faq_title": "WAS IST EAR PRO?",
+            "text_faq_answer": "Ear Pro ist eine effektive Lösung gegen Wasser im Ohr und die damit verbundenen Beschwerden. Ear Pro schützt den äußeren Gehörgang mit einem wasserabweisenden sowie antiinfektiösen Schutzmantel.  Jürgen S. hat Ear Pro mit 5 von 5 Sternen bewertet: “Das erste Produkt, das wirklich ohne Einschränkung geholfen hat. Zwei Tauchurlaube ohne die sonst üblichen Beschwerden mit entzündeten Ohren und Einsatz von Antibiotikum.”"
+          }
+        },
+        "faq_accordion_right_AxWCEA": {
+          "type": "faq-accordion-right",
+          "settings": {
+            "text_faq_title": "WIE FUNKTIONIERT EAR PRO?",
+            "text_faq_answer": "Ear Pro schützt den äußeren Gehörgang mit einem wasserabweisenden sowie antiinfektiösen Schutzmantel. So verhindert Ear Pro das Eindringen von Bakterien und senkt damit das Risiko für Entzündungen, Ohrinfektionen, Schwimmerohr (Swimmer’s Ear) und Surferohr (Surfer’s Ear).  Darüber hinaus enthält Ear Pro Oregano-Öl, dessen natürliche antimikrobielle Eigenschaften Bakterien und Pilze bekämpfen, die Ohrinfektionen verursachen können."
+          }
+        },
+        "faq_accordion_right_RCaFbD": {
+          "type": "faq-accordion-right",
+          "settings": {
+            "text_faq_title": "WAS IST DAS BESONDERE AN EAR PRO?",
+            "text_faq_answer": "Ear Pro wird vor dem Aufenthalt im Wasser angewendet. Die natürlichen antiinfektiösen Inhaltsstoffe von Ear Pro schützen den äußeren Gehörgang mit einem wasserabweisenden Schutzmantel.  Die meisten Produkte auf dem Markt werden hingegen erst nach dem Aufenthalt im Wasser angewendet. Sie enthalten zudem Alkohol, Essigsäure, Glyzerin und andere austrocknende Inhaltsstoffe, die die natürliche und empfindliche Flora im Ohr angreifen können."
           }
         }
       },
@@ -246,7 +268,10 @@
         "faq_accordion_left_zgT6gK",
         "faq_accordion_left_3zDqJq",
         "faq_accordion_left_gUUpMz",
-        "faq_accordion_right_93JLKY"
+        "faq_accordion_right_93JLKY",
+        "faq_accordion_right_MHp7tz",
+        "faq_accordion_right_AxWCEA",
+        "faq_accordion_right_RCaFbD"
       ],
       "settings": {
         "text_heading": "FAQ’s – Mach Dich schlau",
