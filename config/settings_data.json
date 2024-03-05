@@ -16,11 +16,11 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "text_heading_1": "Addresse:",
+          "text_heading_1": "Adresse:",
           "text_text_1": "Liquidpro LTD<br>166 Old Bakery St.<br>Valletta, Malta<br>VLT1455",
           "text_heading_2": "Kontakt:",
           "url_text_2_link_top": "",
-          "text_text_2_top": "1800 123 4567<br>",
+          "text_text_2_top": "",
           "url_text_2_link_bottom": "mailto:info@earpro.co",
           "text_text_2_bottom": "info@earpro.co",
           "url_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=61556816100811",
