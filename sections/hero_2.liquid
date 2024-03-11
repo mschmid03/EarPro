@@ -1,0 +1,30 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-large">
+    <div class="max-width-large is-auto-left">
+    <h1 class="hero2-heading">
+{{ section.settings.text_uberschrift }}
+</h1>
+<p class="header_subheading">
+{{ section.settings.text_unteruberschrift }}
+</p>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="header50_background-image-wrapper">
+    {% if section.settings.checkbox_bildoverlay == true %}
+<div class="image-overlay-layer">
+        </div>
+{% endif %}
+<img class="header50_background-image"
+     src="{{ section.settings.image_hintergrundbild | img_url: 'master' }}"
+     alt="{{ section.settings.image_hintergrundbild.alt }}"
+     loading="lazy">
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"header","name":"hero_2","class":"section_header50","settings":[{"id":"text_uberschrift","type":"text","label":"\u00dcberschrift","default":"Warum Ear Pro?"},{"id":"text_unteruberschrift","type":"text","label":"Unter\u00fcberschrift","default":"DIE WISSENSCHAFT HINTER EARPRO"},{"id":"checkbox_bildoverlay","type":"checkbox","label":"Bildoverlay","default":true},{"id":"image_hintergrundbild","type":"image_picker","label":"Hintergrundbild"}],"presets":[{"name":"hero_2","category":"Liquify"}]}
+{% endschema %}

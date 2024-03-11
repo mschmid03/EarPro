@@ -1,80 +1,80 @@
 <div class="padding-global">
-  <div class="container-large">
+    <div class="container-large">
     <div class="padding-section-large">
-      <div class="margin-bottom margin-large">
-        <div class="text-align-center">
-          <h2>
-            {{ section.settings.text_heading }}
-          </h2>
-          <p class="h2_subheadline">
-            {{ section.settings.text_subheading }}
-          </p>
-        </div>
-      </div>
-      <div class="w-layout-grid faq11_component">
-        <div class="w-layout-grid faq11_list">
-          {% for block in section.blocks %}
-            {% if block.type == 'faq-accordion-left' %}
-              <div li-block="FAQ-Accordion-Left" class="faq11_accordion shadow-medium">
-                <div data-w-id="d85295dc-dcfb-715b-6e4a-f1f3cbb7272b" class="faq11_question">
-                  <div class="text-style-allcaps">
-                    {{ block.settings.text_faq_title }}
-                  </div>
-                  <div class="faq11_icon-wrapper">
-                    <div class="icon-embed-small text-color-secondary w-embed">
-                      <svg width="100%" height="100%" viewbox="0 0 32 32" fill="none">
-                        <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor">
-                            </path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div style="width:100%;height:0px" class="faq11_answer">
-                  <div class="margin-bottom margin-small">
-                    <p>
-                      {{ block.settings.text_faq_answer }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-        <div class="w-layout-grid faq11_list">
-          {% for block in section.blocks %}
-            {% if block.type == 'faq-accordion-right' %}
-              <div li-block="FAQ-Accordion-Right" class="faq11_accordion shadow-medium">
-                <div data-w-id="6899ad95-216a-c93c-7f2e-fdb09b7d16be" class="faq11_question">
-                  <div class="text-style-allcaps">
-                    {{ block.settings.text_faq_title }}
-                  </div>
-                  <div class="faq11_icon-wrapper">
-                    <div class="icon-embed-small text-color-secondary w-embed">
-                      <svg width="100%" height="100%" viewbox="0 0 32 32" fill="none">
-                        <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor">
-                            </path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div style="width:100%;height:0px" class="faq11_answer">
-                  <div class="margin-bottom margin-small">
-                    <p>
-                      {{ block.settings.text_faq_answer }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+    <div class="margin-bottom margin-large">
+    <div class="text-align-center">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
     </div>
-  </div>
+    </div>
+<div class="w-layout-grid faq11_component">
+    <div class="w-layout-grid faq11_list">
+    {% for block in section.blocks %}
+    {% if block.type == "faq-accordion-left" %}
+                    <div li-block="FAQ-Accordion-Left" id="w-node-_09665a95-e1f7-9987-d63a-ee9e9b8aec32-edfe4541" class="faq11_accordion shadow-medium">
+                                    <div data-w-id="09665a95-e1f7-9987-d63a-ee9e9b8aec33" class="faq11_question">
+    <div class="text-style-allcaps">
+{{ block.settings.text_faq_title }}
 </div>
+<div class="faq11_icon-wrapper">
+    <div class="icon-embed-small text-color-secondary w-embed">
+    <svg width="100%" height="100%" viewbox="0 0 32 32" fill="none">
+    <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor">
+        </path>
+    </svg>
+    </div>
+    </div>
+    </div>
+
+                                    <div style="width:100%;height:0px" class="faq11_answer">
+    <div class="margin-bottom margin-small">
+    <div> {{ block.settings.richtext_faq_answer }} </div>
+    </div>
+    </div>
+
+                            </div>
+            {% endif %}
+{% endfor %}
+    </div>
+<div class="w-layout-grid faq11_list">
+    {% for block in section.blocks %}
+    {% if block.type == "faq-accordion-right" %}
+                    <div li-block="FAQ-Accordion-Right" class="faq11_accordion shadow-medium">
+                                    <div data-w-id="09665a95-e1f7-9987-d63a-ee9e9b8aec3e" class="faq11_question">
+    <div class="text-style-allcaps">
+{{ block.settings.text_faq_title }}
+</div>
+<div class="faq11_icon-wrapper">
+    <div class="icon-embed-small text-color-secondary w-embed">
+    <svg width="100%" height="100%" viewbox="0 0 32 32" fill="none">
+    <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="currentColor">
+        </path>
+    </svg>
+    </div>
+    </div>
+    </div>
+
+                                    <div style="width:100%;height:0px" class="faq11_answer">
+    <div class="margin-bottom margin-small">
+    <div> {{ block.settings.richtext_faq_answer }} </div>
+    </div>
+    </div>
+
+                            </div>
+            {% endif %}
+{% endfor %}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
 
 {% schema %}
-{"tag":"section","name":"faq","class":"section_faq","blocks":[{"name":"FAQ-Accordion-Left","type":"faq-accordion-left","settings":[{"type":"text","id":"text_faq_title","label":"FAQ-Title","default":"WAS IST EINGESCHLOSSENES WASSER?"},{"type":"text","id":"text_faq_answer","label":"FAQ-Answer","default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."}]},{"name":"FAQ-Accordion-Right","type":"faq-accordion-right","settings":[{"type":"text","id":"text_faq_title","label":"FAQ-Title","default":"WAS IST SCHWIMMEROHR (SWIMMER\u2019S EAR)?"},{"type":"text","id":"text_faq_answer","label":"FAQ-Answer","default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."}]}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"FAQ\u2019s \u2013 Mach Dich schlau"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Hier findest Du alle wichtigen Antworten auf Fragen zu EarPro"}],"presets":[{"name":"faq","category":"Liquify"}]}
+    {"tag":"section","name":"faq","class":"section_faq","blocks":[{"name":"FAQ-Accordion-Left","type":"faq-accordion-left","settings":[{"type":"text","id":"text_faq_title","label":"FAQ-Title","default":"WAS IST EINGESCHLOSSENES WASSER?"},{"type":"richtext","id":"richtext_faq_answer","label":"FAQ-Answer","default":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.<\/p>"}]},{"name":"FAQ-Accordion-Right","type":"faq-accordion-right","settings":[{"type":"text","id":"text_faq_title","label":"FAQ-Title","default":"WAS IST SCHWIMMEROHR (SWIMMER\u2019S EAR)?"}]}],"settings":[{"id":"text_heading","type":"text","label":"Heading","default":"FAQ\u2019s \u2013 Mach Dich schlau"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Hier findest Du alle wichtigen Antworten auf Fragen zu EarPro"}],"presets":[{"name":"faq","category":"Liquify"}]}
 {% endschema %}

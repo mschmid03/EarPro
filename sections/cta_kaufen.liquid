@@ -1,8 +1,4 @@
 <div class="padding-global">
-  {% if section.settings.product_produkt %}
-    {% assign product = all_products[section.settings.product_produkt] %}
-{% endif %}
-
     <div class="container-large">
     <div class="padding-section-large">
     <div class="w-layout-grid cta39_component shadow-medium">
@@ -85,7 +81,8 @@
     <img src="{{ 'earpro-bottle2.webp' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 376.953125px, (max-width: 991px) 545.59375px, 40vw" srcset="{{ 'earpro-bottle2-p-500.webp' | asset_url }} 500w, {{ 'earpro-bottle2-p-800.webp' | asset_url }} 800w, {{ 'earpro-bottle2-p-1080.webp' | asset_url }} 1080w, {{ 'earpro-bottle2.webp' | asset_url }} 1488w" alt="" class="cta39_image">
     </div>
 <p class="cta_price-text">
-    <span li-object:text="product.title" class="text-color-darkblue">EarPro</span>
+    <span class="text-color-darkblue">
+    Ear Pro    </span>
 <span li-object:text="product.price | money" class="text-color-secondary">
 {{ product.price | money }}
 

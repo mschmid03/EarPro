@@ -1,0 +1,115 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-medium">
+    <div class="margin-bottom margin-large">
+    <div class="text-align-center">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
+    </div>
+    </div>
+<div class="oregano-cards_component">
+    <div class="triple-cards_component">
+    <div id="w-node-_09665a95-e1f7-9987-d63a-ee9e9b8aea6a-edfe4541" class="triple-cards_card">
+    <img class="triple-card_image"
+     src="{{ section.settings.image_bild_1 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_1.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_1 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_1 }} </div>
+    </div>
+    </div>
+<div id="w-node-_09665a95-e1f7-9987-d63a-ee9e9b8aea72-edfe4541" class="triple-cards_card">
+    <img class="triple-card_image"
+     src="{{ section.settings.image_bild_2 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_2.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_2 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_2 }} </div>
+    </div>
+    </div>
+<div id="w-node-_09665a95-e1f7-9987-d63a-ee9e9b8aea7a-edfe4541" class="triple-cards_card">
+    <img class="triple-card_image"
+     src="{{ section.settings.image_bild_3 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_3.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_3 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_3 }} </div>
+    </div>
+    </div>
+    </div>
+<div class="two-cards_component">
+    <div id="w-node-_29d460c8-20f6-cc40-5ade-cec51885e540-edfe4541" class="triple-cards_card">
+    <img class="two-cards_image"
+     src="{{ section.settings.image_bild_4 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_4.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_4 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_4 }} </div>
+    </div>
+    </div>
+<div id="w-node-bb67fd36-ae81-daed-487d-429fe50f7c81-edfe4541" class="two-cards_leaf-image-container">
+    <img class="two-cards_leaf-image" src="{{ 'Oregano-that-has-been-dried--20-1.webp' | asset_url }}" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, 57vw" loading="lazy" srcset="{{ 'Oregano-that-has-been-dried--20-1-p-500.webp' | asset_url }} 500w, {{ 'Oregano-that-has-been-dried--20-1.webp' | asset_url }} 852w">
+    </div>
+<div id="w-node-e1ff2e52-a1eb-0b6e-da47-40a959600d01-edfe4541" class="triple-cards_card">
+    <img class="two-cards_image"
+     src="{{ section.settings.image_bild_5 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_5.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_5 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_5 }} </div>
+    </div>
+    </div>
+<div id="w-node-a3e164c6-7cd7-259e-20ec-6cb6828bcd0c-edfe4541" class="triple-cards_card">
+    <img class="two-cards_image"
+     src="{{ section.settings.image_bild_6 | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild_6.alt }}"
+     loading="lazy">
+<div class="triple-cards_text-wrapper">
+    <div class="margin-bottom margin-xsmall">
+    <h3>
+{{ section.settings.text_bild_titel_6 }}
+</h3>
+    </div>
+<div class="triple-cards_text"> {{ section.settings.richtext_bild_text_6 }} </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"oreganooel","class":"section_oregano-l","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Bio-Oregano\u00f6l:\u00a0<br>\nDas antimikrobielle Wunderwerk"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Lorem Ipsum"},{"id":"image_bild_1","type":"image_picker","label":"Bild 1"},{"id":"text_bild_titel_1","type":"text","label":"Bild-Titel 1","default":"Altbew\u00e4hrte Verl\u00e4sslichkeit:"},{"id":"richtext_bild_text_1","type":"richtext","label":"Bild-Text 1","default":"<p>Das Bio-Oregano-\u00d6l ist seit der griechischen Antike bekannt und verf\u00fcgt \u00fcber beeindruckende medizinische Eigenschaften. Strenge Forschungen \u00fcber dieses \u00e4therische \u00d6l zeigen immer wieder seine starke antimikrobielle Wirkung.<\/p>"},{"id":"image_bild_2","type":"image_picker","label":"Bild 2"},{"id":"text_bild_titel_2","type":"text","label":"Bild-Titel 2","default":"Klinisch bew\u00e4hrt:"},{"id":"richtext_bild_text_2","type":"richtext","label":"Bild-Text 2","default":"<p>In verschiedenen Tests gegen weitverbreitete menschliche Krankheitserreger hat sich Oregano-\u00d6l hervorragend bew\u00e4hrt. Insbesondere sein Carvacrol-Gehalt hat sich bei der Bek\u00e4mpfung von Bakterien bew\u00e4hrt, die h\u00e4ufig mit Ohrenproblemen in Verbindung gebracht werden.<\/p>"},{"id":"image_bild_3","type":"image_picker","label":"Bild 3"},{"id":"text_bild_titel_3","type":"text","label":"Bild-Titel 3","default":"H\u00f6chste Qualit\u00e4t:"},{"id":"richtext_bild_text_3","type":"richtext","label":"Bild-Text 3","default":"<p>Ear Pro verwendet Bio-Oregano-\u00d6l, das reich an Carvacrol ist und eine Konzentration von \u00fcber <br>\n85 % aufweist.<\/p>"},{"id":"image_bild_4","type":"image_picker","label":"Bild 4"},{"id":"text_bild_titel_4","type":"text","label":"Bild-Titel 4","default":"Antibiotikaresistenz:"},{"id":"richtext_bild_text_4","type":"richtext","label":"Bild-Text 4","default":"<p>Ein wachsendes Problem. Die Antibiotikaresistenz stellt die Welt heute vor eine gro\u00dfe Herausforderung. Da Bakterien aufgrund des \u00fcberm\u00e4\u00dfigen Einsatzes von Antibiotika immer widerstandsf\u00e4higer werden, schwinden unsere medizinischen L\u00f6sungen. Alarmierender Weise f\u00fchren viele Ohrenkomplikationen, insbesondere bei Kindern, zu Besuchen in der Notaufnahme, wo Antibiotika die erste Wahl der Behandlung sind. Die Weltgesundheitsorganisation stuft diese Resistenz als eine der gr\u00f6\u00dften global<\/"},{"id":"image_bild_5","type":"image_picker","label":"Bild 5"},{"id":"text_bild_titel_5","type":"text","label":"Bild-Titel 5","default":"Ear Pro: <br>\nEin Schritt in Richtung Pr\u00e4vention."},{"id":"richtext_bild_text_5","type":"richtext","label":"Bild-Text 5","default":"<p>Warum nicht vorbeugen statt behandeln? Ear Pro zielt darauf ab, Ihre Ohren auf nat\u00fcrliche Weise vor Beschwerden und m\u00f6glichen Infektionen zu sch\u00fctzen. Einfach vor dem Schwimmen in jedes Ohr sprayen k\u00f6nnte helfen, Antibiotika und ungewollte Krankenhausbesuche zu vermeiden.<\/p>"},{"id":"image_bild_6","type":"image_picker","label":"Bild 6"},{"id":"text_bild_titel_6","type":"text","label":"Bild-Titel 6","default":"Der beste Begleiter Ihres Ohrs"},{"id":"richtext_bild_text_6","type":"richtext","label":"Bild-Text 6","default":"<p>Tauchen Sie ein, surfen Sie oder genie\u00dfen Sie einfach nur das Schwimmen, ohne dass der Schatten von Ohrenproblemen \u00fcber Ihnen schwebt. Lassen Sie Ear Pro Ihr nat\u00fcrlicher W\u00e4chter sein.<\/p>"}],"presets":[{"name":"oreganooel","category":"Liquify"}]}
+{% endschema %}

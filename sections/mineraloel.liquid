@@ -1,0 +1,60 @@
+<div class="padding-global">
+    <div class="container-large">
+    <div class="padding-section-large">
+    <div class="margin-bottom margin-large">
+    <div class="text-align-center">
+    <h2>
+{{ section.settings.text_heading }}
+</h2>
+<p class="h2_subheadline">
+{{ section.settings.text_subheading }}
+</p>
+    </div>
+    </div>
+<div class="one-side-image_component is-left">
+    <div class="one-side-image_container">
+    <img class="one-side-image_image"
+     src="{{ section.settings.image_bild | img_url: 'master' }}"
+     alt="{{ section.settings.image_bild.alt }}"
+     loading="lazy">
+    </div>
+    </div>
+<div class="triple-text-card_component">
+    <div id="w-node-_633b66ca-1242-5fdd-5625-f3468c75c5b1-edfe4541" class="triple-text-card_text-container">
+    <div class="margin-bottom margin-small">
+    <h3>
+{{ section.settings.text_text_heading_1 }}
+</h3>
+    </div>
+<div> {{ section.settings.richtext_text_1 }} </div>
+    </div>
+<div id="w-node-d7f2aaab-daa8-a51c-a425-235f31d5a343-edfe4541" class="triple-text-card_divider">
+        </div>
+<div id="w-node-f9695961-ef65-c47e-09b4-fd1658a737cf-edfe4541" class="triple-text-card_text-container">
+    <div class="margin-bottom margin-small">
+    <h3>
+{{ section.settings.text_text_heading_2 }}
+</h3>
+    </div>
+<div> {{ section.settings.richtext_text_2 }} </div>
+    </div>
+<div id="w-node-_665b91f2-6cdf-f287-8104-bf6ca0d26f6c-edfe4541" class="triple-text-card_divider">
+        </div>
+<div id="w-node-_6e8dcae7-01d5-83eb-b88b-7101d23debdd-edfe4541" class="triple-text-card_text-container">
+    <div class="margin-bottom margin-small">
+    <h3>
+{{ section.settings.text_text_heading_3 }}
+</h3>
+    </div>
+<div> {{ section.settings.richtext_text_3 }} </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+{% schema %}
+    {"tag":"section","name":"mineraloel","class":"section_med-mineral-l","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Medizinisches Mineral\u00f6l:<br>\nDas sch\u00fctzende Kraftpaket"},{"id":"text_subheading","type":"text","label":"Subheading","default":"Zum optimalen Schutz Ihrer Ohren"},{"id":"image_bild","type":"image_picker","label":"Bild"},{"id":"text_text_heading_1","type":"text","label":"Text-Heading 1","default":"Hochgradig raffinierte<br>\nf\u00fcr h\u00f6chste Qualit\u00e4t"},{"id":"richtext_text_1","type":"richtext","label":"Text 1","default":"<p>Ear Pro \u00fcbertrifft die Reinheit von \u00d6len in Lebensmittelqualit\u00e4t bei Weitem und verwendet die h\u00f6chste Qualit\u00e4tsstufe von Mineral\u00f6len: medizinische oder pharmazeutische Qualit\u00e4t. Dies gew\u00e4hrleistet die gr\u00f6\u00dftm\u00f6gliche Sicherheit f\u00fcr die Anwender.<\/p>"},{"id":"text_text_heading_2","type":"text","label":"Text-Heading 2","default":"Altbew\u00e4hrte Verl\u00e4sslichkeit:"},{"id":"richtext_text_2","type":"richtext","label":"Text 2","default":"<p>Ist Ihnen schon einmal aufgefallen, wie Wasser von bestimmten Oberfl\u00e4chen abperlt, ohne sich abzusetzen? Mineral\u00f6l tut genau das f\u00fcr Ihre Ohren. Es wirkt wie eine Schutzschicht und sorgt daf\u00fcr, dass Wasser nicht an der Haut haftet oder in sie eindringt. Vor allem in Salzwasser, das die Haut austrocknen kann, ist dies wichtig, um die Ohren mit Feuchtigkeit zu versorgen und gesund zu halten.<\/p>"},{"id":"text_text_heading_3","type":"text","label":"Text-Heading 3","default":"Altbew\u00e4hrte Verl\u00e4sslichkeit:"},{"id":"richtext_text_3","type":"richtext","label":"Text 3","default":"<p>Im Gegensatz zu \u00d6len auf Pflanzenbasis, die verderben k\u00f6nnen, bleibt Mineral\u00f6l best\u00e4ndig. W\u00e4hrend ein Oliven\u00f6l in einem Jahr abstehen kann, ist Ear Pro drei Jahre haltbar.<\/p>"}],"presets":[{"name":"mineraloel","category":"Liquify"}]}
+{% endschema %}
