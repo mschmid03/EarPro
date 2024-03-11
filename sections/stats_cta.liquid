@@ -1,87 +1,87 @@
 <div class="padding-global">
-  {% if section.settings.product_produkt %}
-    {% assign product = all_products[section.settings.product_produkt] %}
-  {% endif %}
-  <div class="container-large">
+    <div class="container-large">
     <div class="padding-section-large">
-      <div class="stats1_component">
-        <div class="margin-bottom margin-xxlarge">
-          <div class="w-layout-grid stats1_content">
-            <div class="stats1_content-left">
-              <div class="margin-bottom margin-small">
-                <h2 class="heading-style-h1">
-                  {{ section.settings.text_heading }}
-                </h2>
-              </div>
-              <p class="text-size-medium">
-                {{ section.settings.text_text }}
-              </p>
-            </div>
-            <div class="stats1_content-right">
-              <div class="button-group is-no-wrap hide-mobile-portrait">
-                <a class="button w-button" href="#">
-                  {{ section.settings.text_button_text_1 }}
-                </a>
-                <a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}">
-                  {{ section.settings.text_button_text_2 }}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-layout-grid stats1_list">
-          <div class="stats1_item">
-            <div class="margin-bottom margin-xxsmall">
-              <div class="stats1_number">
-                {{ section.settings.text_stats_1_number }}
-              </div>
-            </div>
-            <p>
-              {{ section.settings.text_stats_1_text }}
-            </p>
-          </div>
-          <div class="stats1_item">
-            <div class="margin-bottom margin-xxsmall">
-              <div class="stats1_number">
-                {{ section.settings.text_stats_2_number }}
-              </div>
-            </div>
-            <p>
-              {{ section.settings.text_stats_2_text }}
-            </p>
-          </div>
-          <div class="stats1_item">
-            <div class="margin-bottom margin-xxsmall">
-              <div class="stats1_number">
-                <span>
-                  {{ section.settings.text_stats_3_large_number }}
-                </span>
-                <span class="text-size-large hide-tablet">
-                  {{ section.settings.text_stats_3_small_number }}
-                </span>
-              </div>
-            </div>
-            <p>
-              {{ section.settings.text_stats_3_text }}
-            </p>
-          </div>
-        </div>
-        <div class="price_component"></div>
-        <div class="margin-top margin-large">
-          <div class="button-group show-mobile-portrait is-center">
-            <a class="button w-button" href="#">
-              {{ section.settings.text_button_text_1 }}
-            </a>
-            <a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}">
-              {{ section.settings.text_button_text_2 }}
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="stats1_component">
+    <div class="margin-bottom margin-xxlarge">
+    <div class="w-layout-grid stats1_content">
+    <div class="stats1_content-left">
+    <div class="margin-bottom margin-small">
+    <h2 class="heading-style-h1">
+{{ section.settings.text_heading }}
+</h2>
     </div>
-  </div>
+<p class="text-size-medium">
+{{ section.settings.text_text }}
+</p>
+    </div>
+<div class="stats1_content-right">
+    <div class="button-group is-no-wrap hide-mobile-portrait">
+    <a class="button w-button" href="#">
+{{ section.settings.text_button_text_1 }}
+</a>
+<a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}">
+{{ section.settings.text_button_text_2 }}
+</a>
+    </div>
+    </div>
+    </div>
+    </div>
+<div class="w-layout-grid stats1_list">
+    <div class="stats1_item">
+    <div class="margin-bottom margin-xxsmall">
+    <div class="stats1_number">
+{{ section.settings.text_stats_1_number }}
 </div>
+    </div>
+<p>
+{{ section.settings.text_stats_1_text }}
+</p>
+    </div>
+<div class="stats1_item">
+    <div class="margin-bottom margin-xxsmall">
+    <div class="stats1_number">
+{{ section.settings.text_stats_2_number }}
+</div>
+    </div>
+<p>
+{{ section.settings.text_stats_2_text }}
+</p>
+    </div>
+<div class="stats1_item">
+    <div class="margin-bottom margin-xxsmall">
+    <div class="stats1_number">
+    <span>
+{{ section.settings.text_stats_3_large_number }}
+</span>
+<span class="text-size-large hide-tablet">
+{{ section.settings.text_stats_3_small_number }}
+</span>
+    </div>
+    </div>
+<p>
+{{ section.settings.text_stats_3_text }}
+</p>
+    </div>
+    </div>
+<div class="price_component">
+</div>
+<div class="margin-top margin-large">
+    <div class="button-group show-mobile-portrait is-center">
+    <a class="button w-button" href="#">
+{{ section.settings.text_button_text_1 }}
+</a>
+<a class="button is-secondary w-button" href="{{ section.settings.url_button_link_2 }}">
+{{ section.settings.text_button_text_2 }}
+</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
 
 {% schema %}
-{"tag":"section","name":"stats_cta","class":"section_stats1","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Sch\u00fctze dein Geh\u00f6r vor Infektionen"},{"id":"text_text","type":"text","label":"Text","default":"Wassereinschl\u00fcsse in den Ohren sind bei Wasserliebhabern auf der ganzen Welt mit kurz- und langfristigem H\u00f6rverlust verbunden. Warum das Risiko eingehen?"},{"id":"text_button_text_1","type":"text","label":"Button-Text-1","default":"Jetzt Kaufen"},{"id":"text_button_text_2","type":"text","label":"Button-Text-2","default":"Mehr erfahren"},{"id":"url_button_link_2","type":"url","label":"Button-Link-2"},{"id":"text_stats_1_number","type":"text","label":"Stats-1-Number","default":"10%"},{"id":"text_stats_1_text","type":"text","label":"Stats-1-Text","default":"weltweit erkranken im Laufe Ihres Lebens an einem Schwimmerohr"},{"id":"text_stats_2_number","type":"text","label":"Stats-2-Number","default":"5x"},{"id":"text_stats_2_text","type":"text","label":"Stats-2-Text","default":"h\u00f6heres Risiko bei Wassersportlern und Schwimmern"},{"id":"text_stats_3_large_number","type":"text","label":"Stats-3-Large-Number","default":"5-14"},{"id":"text_stats_3_small_number","type":"text","label":"Stats-3-Small-Number","default":"Jahre"},{"id":"text_stats_3_text","type":"text","label":"Stats-3-Text","default":"In diesem Alter sind die Arztbesuche wegen Schwimmerohr am h\u00f6chsten"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"stats_cta","category":"Liquify"}]}
+    {"tag":"section","name":"stats_cta","class":"section_stats1","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Sch\u00fctze dein Geh\u00f6r vor Infektionen"},{"id":"text_text","type":"text","label":"Text","default":"Wassereinschl\u00fcsse in den Ohren sind bei Wasserliebhabern auf der ganzen Welt mit kurz- und langfristigem H\u00f6rverlust verbunden. Warum das Risiko eingehen?"},{"id":"text_button_text_1","type":"text","label":"Button-Text-1","default":"Jetzt Kaufen"},{"id":"text_button_text_2","type":"text","label":"Button-Text-2","default":"Mehr erfahren"},{"id":"url_button_link_2","type":"url","label":"Button-Link-2"},{"id":"text_stats_1_number","type":"text","label":"Stats-1-Number","default":"10%"},{"id":"text_stats_1_text","type":"text","label":"Stats-1-Text","default":"weltweit erkranken im Laufe Ihres Lebens an einem Schwimmerohr"},{"id":"text_stats_2_number","type":"text","label":"Stats-2-Number","default":"5x"},{"id":"text_stats_2_text","type":"text","label":"Stats-2-Text","default":"h\u00f6heres Risiko bei Wassersportlern und Schwimmern"},{"id":"text_stats_3_large_number","type":"text","label":"Stats-3-Large-Number","default":"5-14"},{"id":"text_stats_3_small_number","type":"text","label":"Stats-3-Small-Number","default":"Jahre"},{"id":"text_stats_3_text","type":"text","label":"Stats-3-Text","default":"In diesem Alter sind die Arztbesuche wegen Schwimmerohr am h\u00f6chsten"},{"id":"product_produkt","type":"product","label":"Produkt"}],"presets":[{"name":"stats_cta","category":"Liquify"}]}
 {% endschema %}

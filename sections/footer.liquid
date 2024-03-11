@@ -33,28 +33,16 @@
     Versand    </div>
 <div class="payment-icons">
     <div>
-    <img class="payment-icon"
-     src="{{ section.settings.image_icon | img_url: 'master' }}"
-     alt="{{ section.settings.image_icon.alt }}"
-     loading="lazy">
+    <img src="https://uploads-ssl.webflow.com/613f2f905ede8d670775fc8a/61535dd658b6663c8f55bd62_Group%20301.svg" loading="lazy" alt="" class="payment-icon">
     </div>
 <div>
-    <img class="payment-icon is-gls"
-     src="{{ section.settings.image_icon | img_url: 'master' }}"
-     alt="{{ section.settings.image_icon.alt }}"
-     loading="lazy">
+    <img src="{{ 'logo-glswhite.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 58.9296875px, (max-width: 767px) 3vw, 2vw" srcset="{{ 'logo-glswhite-p-500.png' | asset_url }} 500w, {{ 'logo-glswhite.png' | asset_url }} 831w" alt="" class="payment-icon is-gls">
     </div>
 <div>
-    <img class="payment-icon is-dpd"
-     src="{{ section.settings.image_icon | img_url: 'master' }}"
-     alt="{{ section.settings.image_icon.alt }}"
-     loading="lazy">
+    <img src="{{ 'dpd_head.png' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 54.9609375px, (max-width: 767px) 3vw, 2vw" srcset="{{ 'dpd_head-p-500.png' | asset_url }} 500w, {{ 'dpd_head.png' | asset_url }} 600w" alt="" class="payment-icon is-dpd">
     </div>
 <div>
-    <img class="payment-icon is-hermes"
-     src="{{ section.settings.image_icon | img_url: 'master' }}"
-     alt="{{ section.settings.image_icon.alt }}"
-     loading="lazy">
+    <img src="{{ '5ce5669a27a2154f80086942_hermes.png' | asset_url }}" loading="lazy" alt="" class="payment-icon is-hermes">
     </div>
     </div>
     </div>
@@ -113,5 +101,5 @@
 
 
 {% schema %}
-    {"tag":"footer","name":"footer","class":"footer3_component","settings":[{"id":"text_heading_2","type":"text","label":"Heading-2","default":"Kontakt:"},{"id":"url_text_2_link_top","type":"url","label":"Text-2-Link-Top"},{"id":"text_text_2_top","type":"text","label":"Text-2-Top","default":"1800 123 4567<br>\n"},{"id":"url_text_2_link_bottom","type":"url","label":"Text-2-Link-Bottom"},{"id":"text_text_2_bottom","type":"text","label":"Text-2-Bottom","default":"info@relume.io"},{"id":"url_facebook_link","type":"url","label":"Facebook-Link"},{"id":"url_instalink","type":"url","label":"Instalink"},{"id":"image_icon","type":"image_picker","label":"icon"}],"presets":[{"name":"footer","category":"Liquify"}]}
+    {"tag":"footer","name":"footer","class":"footer3_component","settings":[{"id":"text_heading_2","type":"text","label":"Heading-2","default":"Kontakt:"},{"id":"url_text_2_link_top","type":"url","label":"Text-2-Link-Top"},{"id":"text_text_2_top","type":"text","label":"Text-2-Top","default":"1800 123 4567<br>\n"},{"id":"url_text_2_link_bottom","type":"url","label":"Text-2-Link-Bottom"},{"id":"text_text_2_bottom","type":"text","label":"Text-2-Bottom","default":"info@relume.io"},{"id":"url_facebook_link","type":"url","label":"Facebook-Link"},{"id":"url_instalink","type":"url","label":"Instalink"}],"presets":[{"name":"footer","category":"Liquify"}]}
 {% endschema %}
