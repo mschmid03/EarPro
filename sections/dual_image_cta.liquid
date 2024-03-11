@@ -1,8 +1,4 @@
 <div class="padding-global">
-  {% if section.settings.product_produkt %}
-    {% assign product = all_products[section.settings.product_produkt] %}
-{% endif %}
-
     <div class="container-large">
     <div class="padding-section-large">
     <div class="margin-bottom margin-medium">
@@ -36,10 +32,7 @@
 </div>
     </div>
 <div class="cta1_image-wrapper is-transparent-image">
-    <img class="cta1_image"
-     src="{{ section.settings.image_card_image | img_url: 'master' }}"
-     alt="{{ section.settings.image_card_image.alt }}"
-     loading="lazy">
+    <img src="{{ 'nutzungsanleitung-earpro.webp' | asset_url }}" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 83vw, (max-width: 991px) 640px, 40vw" srcset="{{ 'nutzungsanleitung-earpro-p-500.webp' | asset_url }} 500w, {{ 'nutzungsanleitung-earpro-p-800.webp' | asset_url }} 800w, {{ 'nutzungsanleitung-earpro-p-1080.webp' | asset_url }} 1080w, {{ 'nutzungsanleitung-earpro-p-1600.webp' | asset_url }} 1600w, {{ 'nutzungsanleitung-earpro.webp' | asset_url }} 2419w" alt="" class="cta1_image">
     </div>
 <div class="margin-bottom margin-medium">
     <div class="button-group is-center show-tablet">
@@ -64,5 +57,5 @@
 
 
 {% schema %}
-    {"tag":"section","name":"dual_image_cta","class":"section_cta1","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_bullet_1_text","type":"text","label":"Bullet-1-Text","default":"Nie wieder Probleme mit Wasser in den Ohren"},{"id":"text_bullet_2_text","type":"text","label":"Bullet-2-Text","default":"Ein Spr\u00fchsto\u00df in jedes Ohr bevor es nass wird"},{"id":"text_bullet_3_text","type":"text","label":"Bullet-3-Text","default":"Sicherer Schutz f\u00fcr 2 Stunden"},{"id":"text_button_text_1","type":"text","label":"Button-Text 1","default":"Jetzt kaufen"},{"id":"url_button_link_2","type":"url","label":"Button-Link-2"},{"id":"text_button_text_2","type":"text","label":"Button-Text-2","default":"Mehr erfahren"},{"id":"product_produkt","type":"product","label":"Produkt"},{"id":"image_card_image","type":"image_picker","label":"Card-Image"},{"id":"image_large_image","type":"image_picker","label":"Large-Image"}],"presets":[{"name":"dual_image_cta","category":"Liquify"}]}
+    {"tag":"section","name":"dual_image_cta","class":"section_cta1","settings":[{"id":"text_heading","type":"text","label":"Heading","default":"Einfache Anwendung und hoher Schutz"},{"id":"text_bullet_1_text","type":"text","label":"Bullet-1-Text","default":"Nie wieder Probleme mit Wasser in den Ohren"},{"id":"text_bullet_2_text","type":"text","label":"Bullet-2-Text","default":"Ein Spr\u00fchsto\u00df in jedes Ohr bevor es nass wird"},{"id":"text_bullet_3_text","type":"text","label":"Bullet-3-Text","default":"Sicherer Schutz f\u00fcr 2 Stunden"},{"id":"text_button_text_1","type":"text","label":"Button-Text 1","default":"Jetzt kaufen"},{"id":"url_button_link_2","type":"url","label":"Button-Link-2"},{"id":"text_button_text_2","type":"text","label":"Button-Text-2","default":"Mehr erfahren"},{"id":"product_produkt","type":"product","label":"Produkt"},{"id":"image_large_image","type":"image_picker","label":"Large-Image"}],"presets":[{"name":"dual_image_cta","category":"Liquify"}]}
 {% endschema %}
